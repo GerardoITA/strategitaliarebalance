@@ -1,0 +1,61 @@
+PR_commandant_cooldown = {
+}
+
+PR_grand_captain_cooldown = {
+}
+
+gecko_armyreform_cooldown = {
+}
+
+gecko_militaryreform_cooldown = {
+}
+
+commandant_cooldown = {
+}
+
+grand_captain_cooldown = {
+}
+hired_naval_reformer = {
+}
+
+hired_conquistador = {
+}
+
+# mercs credits to Smeev
+
+mercs_bought = {
+}
+merc_recruited = {
+	local_friendly_movement_speed = -0.9
+}
+geckoavailablemercs = {
+}
+increased_merc_recruitment = {
+	is_mercenary_modifier = yes
+	land_morale = -0.15
+}
+increased_merc_quality = {
+	is_mercenary_modifier = yes
+	infantry_power = 0.10
+}	
+
+130percentavailablemercs = {
+}
+
+100percentavailablemercs = {
+}
+merc_spawn_timer = {
+}
+mercs_spawned = {
+}
+mjl_english_cuck = {
+	heir_chance = -10
+}
+strategitalia_colonist = {
+	colonists = 1
+	global_colonial_growth = 60
+}
+p_janissary_decadence = {
+	is_janissary_modifier = yes
+	discipline = 0.1
+}

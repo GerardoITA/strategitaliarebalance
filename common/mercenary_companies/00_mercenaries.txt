@@ -1,0 +1,54 @@
+merc_hessian_jaegerkorps  = {
+    regiments_per_development = 0.04
+    #home_province = 4728 # Pavia
+	#cavalry_weight = 0.2
+	sprites = { dlc028_hes_sprite_pack westerngfx_sprite_packk }
+    trigger = {
+
+		NOT = {has_country_modifier = merc_spawn_timer }
+		OR = {
+			tag = HES
+			tag = WES
+		}
+	}
+	#cost_modifier = 1
+	modifier = { 
+		fire_damage_received = -0.25
+		shock_damage_received = -0.25
+	}
+}
+merc_doppelsoeldner = {
+    regiments_per_development = 0.04
+    #home_province = 70 # Stuttgart
+	#artillery_weight = 0.3
+    #cost_modifier = 1.25
+	sprites = { dlc061_wur_sprite_pack dlc028_wur_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+		NOT = {has_country_modifier = merc_spawn_timer }
+
+		OR = {
+			tag = HES
+			tag = WES
+		}
+	}
+	modifier = {
+        infantry_power = 0.2
+	}
+}
+merc_reislaufer = {
+    regiments_per_development = 0.06
+    #home_province = 4728 # Pavia
+	#cavalry_weight = 0.2
+	sprites = { dlc029_pap_sprite_pack dlc040_pap_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+
+		NOT = {has_country_modifier = merc_spawn_timer }
+		OR = {
+			tag = SWI
+		}
+	}
+	#cost_modifier = 1
+	modifier = { 
+		discipline = 0.1
+	}
+}

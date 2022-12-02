@@ -1,0 +1,87 @@
+! = cancellato
+# = fatto
+---| 
+
+#Defines di strategitalia 
+#---| Artiglieria che non si ritira
+#---| +50 base absolutism e +5 base yearly absolutism gain
+
+Decisioni
+#---| Seleziona advisor militare
+!---| Dev count click
+!---| Educate ruler
+#---| Critical events
+
+
+Eventi 
+#---| Opzione per non prendere evento disciplina/altri eventi
+!---| Failsafe polonia e ottomani
+#---| Choose muslim school 
+!---| Reveal africa to africans
+
+Esercito
+#---| Mercenari hanno solo fanteria costano 0 army professionalism
+#--| Mercenary solo a Svizzera e Hesse
+
+Missioni 
+#---| Nerf missioni Svezia, cambia direzione da Novgorod/Stettin a Danimarca
+
+Idee
+#---| Fix idee afghanistan e altre minor
+#--| Bukhara cav ratio 
+
+
+Tech
+#---| Africani con feudalesimo e tech 3
+
+Generale
+#---| Cambia expand infra in gecko
+#---| Tutti partono con 30.5 crownland
+#---| Finire genocidio americhe
+#---| Privilegio per +2 legalismo -2 legalismo
+#--| Downgrade trade center non costa prestigio
+#--| Exceed gov capacity costa manpower
+#--| sia prussia che germania possono fare age bonus
+#--| remove naval ideas and maritime ideas
+#--| pareggiare pip di fire difensive e offensive di tutte le tech
+#--| Polonia non può fare Prussia
+
+Morocco 
+#---| Truce tra Marocco e Granada, missioni Marocco
+#---| Merge Tunisia e Safi
+
+
+Milan 
+#---| Ambrosian republic day 1
+
+Ethiopia, Songhai
+#--| Fix
+
+Ayutthaya
+#--| Siam formabile a tech 10 tramite decisione se possiede indocina
+
+Hungary 
+--| Formable bisanzio aggiugnere decisione aggiungere greek culture a balcanica
+CINA!!!!!!!!!
+
+#Yumen prende mezzo xian fino a xi e un pezzo di chengdu + kashgaria + amdo
+
+SLOT:
+1 beijing, 1 hangzou 1 canton 1 zona chengdu e roba da girin
+
+Start sono nazioni con idee mediocri, a 2 a 2 competono per formable che rendono regional power e infine chinese empire
+
+cultura koreana in jap culture group
+
+zhuang, e culture sud cina in cultura tibetana
+
+6 start con 100
+
+
+localizzazione, ideas, history
+
+STRETTI!!!
+
+
+
+

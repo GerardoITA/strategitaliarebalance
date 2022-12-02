@@ -1,0 +1,2392 @@
+#advisors
+country_event = {
+	id = gecko.11
+	title = gecko.11.title
+	desc = gecko.11.desc
+	picture = LAND_MILITARY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = gecko.11.a
+		
+		add_adm_power  = -25
+		create_advisor = commandant		
+	}
+	option = {
+		name = gecko.11.b
+		
+		add_adm_power  = -25
+		create_advisor = army_reformer
+	}
+	option = {
+		name = gecko.11.c
+		
+		add_adm_power  = -25
+		create_advisor = recruitmaster
+	}
+	option = {
+		name = gecko.11.h
+		
+		add_adm_power  = -25
+		create_advisor = grand_captain	
+	}
+	option = {
+		name = gecko.11.i
+		
+		add_adm_power  = -25
+		create_advisor = fortification_expert		
+	}
+	option = {
+		name = gecko.11.j
+		
+		add_adm_power  = -25
+		create_advisor = quartermaster		
+	}
+	option = {
+		name = gecko.11.l
+		
+		add_adm_power  = -25
+		create_advisor = army_organiser	
+	}
+	option = {
+		name = gecko.11.m
+		
+		#nothing
+	}	
+}
+## Credits to Smeev
+##pulse event to check mercs####
+country_event = {
+    id = gecko.18
+   title = gecko.18.t
+    desc = gecko.18.d
+picture = COURT_eventPicture
+
+   trigger = {
+		ROOT = {
+				ai = no
+			}
+		 OR = {
+			has_country_modifier = mercs_bought 
+			has_country_modifier = We_stand_alone
+			has_country_modifier = increased_merc_quality
+		}
+		 NOT = { has_country_modifier = Minor}
+   }
+	hidden = yes
+    mean_time_to_happen = {
+        days = 30
+    }
+	
+	immediate = {
+
+		export_to_variable = {
+					which = geckomercFL
+					value = land_forcelimit
+					who = ROOT
+			}
+			divide_variable = {
+					which = geckomercFL
+					value = 100
+			}
+			multiply_variable = {
+					which = geckomercFL
+					value = 33
+			}
+			change_variable = {
+					which = geckomercFL
+					value = 20
+			}
+			multiply_variable = { 
+								which = geckomercFL
+								which = availablegeckomercs
+			}
+			export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+			}
+	}
+
+	option = {
+	}
+}
+##pulse event to check mercs####
+country_event = {
+    id = gecko.19
+   title = gecko.19.t
+    desc = gecko.19.d
+picture = COURT_eventPicture
+
+   trigger = {
+		ROOT = {
+				ai = no
+			}
+		 OR = {
+			has_country_modifier = We_stand_alone
+			has_country_modifier = increased_merc_quality
+			has_country_modifier = mercs_bought
+		}
+	
+    
+		has_country_modifier = Minor	
+   }
+	hidden = yes
+   mean_time_to_happen = {
+        days = 30
+    }
+	
+	immediate = {
+		export_to_variable = {
+					which = geckomercFL
+					value = land_forcelimit
+					who = ROOT
+			}
+			divide_variable = {
+					which = geckomercFL
+					value = 100
+			}
+			multiply_variable = {
+					which = geckomercFL
+					value = 33
+			}
+			change_variable = {
+					which = geckomercFL
+					value = 30
+			}
+			multiply_variable = {
+								which = geckomercFL
+								which = availablegeckomercs
+						}
+			export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+			}
+	}
+	option = {
+	}
+}
+###stop pulse event#####
+country_event = {
+    id = gecko.20
+   title = gecko.20.t
+    desc = gecko.20.d
+picture = COURT_eventPicture
+
+   trigger = {
+		NOT = { num_of_mercenaries = 1 }
+		has_country_modifier = mercs_bought 
+   }
+	hidden = yes
+    mean_time_to_happen = {
+        days = 90
+    }
+	
+	immediate = {
+		remove_country_modifier = mercs_bought 
+		export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+		}	
+	}
+	option = {	
+	}
+}
+##set available mercs to +25%####
+country_event = {
+    id = gecko.21
+   title = gecko.21.t
+    desc = gecko.21.d
+    picture = COURT_eventPicture
+
+  trigger = {
+        ai = no
+			has_country_modifier = geckoavailablemercs
+		 	
+		 NOT = {
+					check_variable = {
+								which = availablegeckomercs
+								value = 1.15
+							}
+				}
+   }
+	hidden = yes
+    mean_time_to_happen = {
+        days = 1
+    }
+	
+	immediate = {
+		set_variable = {            
+						which = availablegeckomercs
+						value = 1.15
+				}			
+	}
+	option = {	
+	}
+}
+##reset available mercs to +0%####
+country_event = {
+    id = gecko.22
+   title = gecko.22.t
+    desc = gecko.22.d
+picture = COURT_eventPicture
+
+   trigger = {
+         ROOT = {
+         ai = no
+		 }
+				NOT = { has_age_ability = ab_burgundy_merc_manpower }
+				NOT = { has_age_ability = ab_hesse_mercs}
+				NOT = { has_country_modifier = geckoavailablemercs}
+				AND = {	
+					NOT = { has_country_modifier = We_stand_alone }
+					check_variable = {
+									which = availablegeckomercs
+									value = 1.15
+								}
+					
+				}	
+				
+   }
+	hidden = yes
+    mean_time_to_happen = {
+        days = 1
+    }
+	
+	immediate = {
+		set_variable = {            
+						which = availablegeckomercs
+						value = 1
+		}	
+	}
+	option = {	
+	}
+}
+###merc modifying event###
+country_event = {
+	id = gecko.28
+	title = gecko.28.title
+	desc = gecko.28.desc
+	picture = LAND_MILITARY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = gecko.28.a
+		
+		custom_tooltip = gecko_increased_merc_limit_tt
+			
+			hidden_effect = {
+				export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+					}
+				#add_country_modifier = {
+				#	name = "We_stand_alone"
+				#	duration = 3650
+				#}
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								 has_country_modifier = We_stand_alone
+								 has_age_ability = ab_hesse_mercs
+							}
+							AND = {
+								 has_country_modifier = We_stand_alone
+								 has_age_ability = ab_burgundy_merc_manpower
+							}
+						}
+					}
+					set_variable = {            
+								which = availablegeckomercs
+								value = 1.3
+						}	
+					add_country_modifier = {
+						name = "130percentavailablemercs"
+						duration = -1
+						hidden = yes
+					}	
+				}
+				else = {
+					set_variable = {            
+							which = availablegeckomercs
+							value = 1.15
+					}
+				}	
+			}
+	}
+	option = {
+		name = gecko.28.b
+		
+		custom_tooltip = gecko_decreased_merc_limit_tt
+			
+			hidden_effect = {
+				export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+					}
+				add_country_modifier = {
+					name = "increased_merc_quality"
+					duration = 3650
+				}
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								 has_country_modifier = increased_merc_quality
+								 has_age_ability = ab_hesse_mercs
+							}
+							AND = {
+								 has_country_modifier = increased_merc_quality
+								 has_age_ability = ab_burgundy_merc_manpower
+							}
+						}
+					}
+					set_variable = {            
+								which = availablegeckomercs
+								value = 1
+						}
+					add_country_modifier = {
+						name = "100percentavailablemercs"
+						duration = -1
+						hidden = yes
+					}
+				}
+				else = {
+					set_variable = {            
+							which = availablegeckomercs
+							value = 0.85
+					}
+				}
+			}
+	}
+	option = {
+		name = gecko.28.c
+		
+		#nothing
+	}
+}
+
+####on losing age ability for increased available mercs####
+country_event = {
+    id = gecko.24
+   title = gecko.24.t
+    desc = gecko.24.d
+picture = COURT_eventPicture
+
+   trigger = {
+	always = no
+		ROOT = {
+         ai = no
+		}
+		 AND = {
+			NOT = { has_age_ability = ab_burgundy_merc_manpower }
+			NOT = { has_age_ability = ab_hesse_mercs }
+		}	
+		check_variable = {
+								which = availablegeckomercs
+								value = 1.15
+							}
+				
+   }
+	hidden = yes
+    mean_time_to_happen = {
+        days = 1
+    }
+	
+	immediate = {
+		if = {
+			limit = {
+				 has_country_modifier = 130percentavailablemercs
+				 has_country_modifier = We_stand_alone
+			}
+			set_variable = {            
+						which = availablegeckomercs
+						value = 1.15
+			}
+			remove_country_modifier	= 130percentavailablemercs
+		}
+		else = {
+				set_variable = {            
+						which = availablegeckomercs
+						value = 1
+				}
+		}			
+	}
+	option = {	
+	}
+}
+
+###on losing increased merc quality modifier #####
+country_event = {
+    id = gecko.26
+   title = gecko.26.t
+    desc = gecko.26.d
+picture = COURT_eventPicture
+
+   trigger = {
+        ROOT = {
+         ai = no
+		}
+			NOT =  { has_country_modifier = increased_merc_quality }
+			NOT = { 
+				check_variable = {
+								which = availablegeckomercs
+								value = 0.85
+							}
+			}
+   }
+	hidden = yes
+    mean_time_to_happen = {
+        days = 1
+    }
+	
+	immediate = {
+				set_variable = {            
+							which = availablegeckomercs
+							value = 1
+					}
+						
+	}
+	option = {	
+	}
+}
+###on losing increased quality but having available mercs ###
+country_event = {
+    id = gecko.27
+   title = gecko.27.t
+    desc = gecko.27.d
+picture = COURT_eventPicture
+
+   trigger = {
+         ROOT = {
+         ai = no
+		}
+			NOT =  { has_country_modifier = increased_merc_quality }
+			has_country_modifier = 100percentavailablemercs
+			OR = {
+				has_age_ability = ab_burgundy_merc_manpower
+				has_age_ability = ab_hesse_mercs
+			}
+   }
+	hidden = yes
+    mean_time_to_happen = {
+        days = 1
+    }
+	
+	immediate = {
+				set_variable = {            
+							which = availablegeckomercs
+							value = 1.15
+					}
+				remove_country_modifier = 100percentavailablemercs
+	}
+	option = {	
+	}
+}
+
+###on losing increased merc recruitment but having available mercs ###
+country_event = {
+    id = gecko.29
+   title = gecko.29.t
+    desc = gecko.29.d
+picture = COURT_eventPicture
+
+   trigger = {
+       ROOT = {
+         ai = no
+		}
+			NOT =  { has_country_modifier = We_stand_alone }
+			has_country_modifier = 130percentavailablemercs
+   }
+	hidden = yes
+    mean_time_to_happen = {
+        days = 1
+    }
+	
+	immediate = {
+				if = {
+					limit = {
+							OR = {
+								has_age_ability = ab_burgundy_merc_manpower
+								has_age_ability = ab_hesse_mercs
+							}
+					}
+					set_variable = {            
+							which = availablegeckomercs
+							value = 1.15
+					}
+					remove_country_modifier = 130percentavailablemercs
+				}
+								
+				else = {
+					set_variable = {            
+							which = availablegeckomercs
+							value = 1
+					}
+					remove_country_modifier = 130percentavailablemercs
+				}
+	}
+	option = {	
+	}
+}
+##start up event for mercs####
+country_event = {
+	 id = gecko.30
+	title = gecko.30.t
+    desc = gecko.30.d
+picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+				if = {
+				limit = {
+					ROOT = {
+						ai = no
+					}
+					has_country_modifier = Minor
+				}
+				hidden_effect = {
+					export_to_variable = {
+							which = geckomercFL
+							value = land_forcelimit
+							who = ROOT
+					}
+					divide_variable = {
+							which = geckomercFL
+							value = 100
+					}
+					multiply_variable = {
+							which = geckomercFL
+							value = 33
+					}
+					change_variable = {
+							which = geckomercFL
+							value = 30
+					}
+					set_variable = {            
+							which = availablegeckomercs
+							value = 1
+					}		
+					export_to_variable = {
+								which = geckomercvalue
+								value = trigger_value:num_of_mercenaries
+								who = ROOT
+					}
+				}	
+			}
+			else = {
+				hidden_effect = {
+					export_to_variable = {
+							which = geckomercFL
+							value = land_forcelimit
+							who = ROOT
+					}
+					divide_variable = {
+							which = geckomercFL
+							value = 100
+					}
+					multiply_variable = {
+							which = geckomercFL
+							value = 33
+					}
+					change_variable = {
+							which = geckomercFL
+							value = 20
+					}
+					set_variable = {            
+							which = availablegeckomercs
+							value = 1
+					}
+					export_to_variable = {
+								which = geckomercvalue
+								value = trigger_value:num_of_mercenaries
+								who = ROOT
+					}
+				}
+			}	
+	}
+}
+
+##increase available mercs event with age ability option####
+country_event = {
+    id = gecko.23
+   title = gecko.23.t
+    desc = gecko.23.d
+picture = COURT_eventPicture
+
+   trigger = {
+        ROOT = {
+         ai = no
+		}
+		 OR = {
+			 has_age_ability = ab_burgundy_merc_manpower
+			 has_age_ability = ab_hesse_mercs
+		}	 
+		has_country_modifier = We_stand_alone
+		 
+		NOT = {  has_country_modifier = increased_merc_quality }
+		check_variable = {
+								which = availablegeckomercs
+								value = 1.15
+							}
+		NOT = {
+			check_variable = {
+								which = availablegeckomercs
+								value = 1.3
+							}
+		}	
+	}	
+		hidden = yes
+	mean_time_to_happen = {
+			days = 1
+	}
+
+	immediate = {
+		if = {
+			limit = {
+			    OR = {
+					AND = {
+						 has_country_modifier = We_stand_alone
+						 has_age_ability = ab_hesse_mercs
+					}
+					AND = {
+						 has_country_modifier = We_stand_alone
+						 has_age_ability = ab_burgundy_merc_manpower
+					}
+				}
+			}
+			set_variable = {            
+						which = availablegeckomercs
+						value = 1.3
+				}	
+			add_country_modifier = {
+					name = "130percentavailablemercs"
+					duration = -1
+				}
+		}
+		else = {
+				set_variable = {            
+						which = availablegeckomercs
+						value = 1.15
+				}
+			}	
+	}
+	option = {	
+	}
+}
+
+
+##increase merc quality event with age ability option####
+country_event = {
+    id = gecko.31
+   title = gecko.31.t
+    desc = gecko.31.d
+picture = COURT_eventPicture
+
+   trigger = {
+         ROOT = {
+         ai = no
+		}
+			OR = {
+			 has_age_ability = ab_burgundy_merc_manpower
+			 has_age_ability = ab_hesse_mercs
+			} 
+			 has_country_modifier = increased_merc_quality
+
+		 
+		 NOT = {  has_country_modifier = We_stand_alone}
+		 check_variable = {
+								which = availablegeckomercs
+								value = 0.85
+							}
+		 NOT = {
+				check_variable = {
+								which = availablegeckomercs
+								value = 1
+							}
+		 
+			}
+	}		
+		hidden = yes
+	mean_time_to_happen = {
+			days = 1
+	}
+
+	immediate = {
+		if = {
+			limit = {
+			    OR = {
+					AND = {
+						 has_country_modifier = increased_merc_quality
+						 has_age_ability = ab_hesse_mercs
+					}
+					AND = {
+						 has_country_modifier = increased_merc_quality
+						 has_age_ability = ab_burgundy_merc_manpower
+					}
+				}
+			}
+			set_variable = {            
+						which = availablegeckomercs
+						value = 1
+				}
+			add_country_modifier = {
+					name = "100percentavailablemercs"
+					duration = -1
+				}
+		}
+		else = {
+				set_variable = {            
+						which = availablegeckomercs
+						value = 0.85
+				}
+			}	
+	}
+	option = {	
+	}
+}
+
+##on losing age ability with increase quality option####
+country_event = {
+    id = gecko.32
+   title = gecko.32.t
+    desc = gecko.32.d
+picture = COURT_eventPicture
+
+   trigger = {
+         ROOT = {
+         ai = no
+		}
+			AND = {
+				NOT = {	has_age_ability = ab_burgundy_merc_manpower }
+				NOT = {	has_age_ability = ab_hesse_mercs }
+			}	
+			 has_country_modifier = increased_merc_quality
+			 has_country_modifier = 100percentavailablemercs
+		 NOT = {  has_country_modifier = We_stand_alone }
+			check_variable = {
+								which = availablegeckomercs
+								value = 1
+							}
+		 
+			
+	}		
+		hidden = yes
+	mean_time_to_happen = {
+			days = 1
+	}
+
+	immediate = {
+			set_variable = {            
+						which = availablegeckomercs
+						value = 0.85
+				}
+			remove_country_modifier = 100percentavailablemercs
+		}	
+	
+	option = {	
+	}
+}
+
+##on losing age ability with increase merc recruitment option####
+country_event = {
+    id = gecko.33
+   title = gecko.33.t
+    desc = gecko.33.d
+picture = COURT_eventPicture
+
+   trigger = {
+         ROOT = {
+         ai = no
+		}
+			AND = {
+				NOT = {	has_age_ability = ab_burgundy_merc_manpower }
+				NOT = {	has_age_ability = ab_hesse_mercs }
+			}	
+			 has_country_modifier = We_stand_alone
+			 has_country_modifier = 130percentavailablemercs
+		 NOT = {  has_country_modifier = increased_merc_quality }
+			check_variable = {
+								which = availablegeckomercs
+								value = 1.3
+							}
+		 
+			
+	}		
+		hidden = yes
+	mean_time_to_happen = {
+			days = 1
+	}
+
+	immediate = {
+			set_variable = {            
+						which = availablegeckomercs
+						value = 1.15
+				}
+			remove_country_modifier = 130percentavailablemercs
+		}	
+	
+	option = {	
+	}
+}
+
+## available mercs age ability ####
+country_event = {
+    id = gecko.34
+   title = gecko.34.t
+    desc = gecko.34.d
+picture = COURT_eventPicture
+
+   trigger = {
+		ROOT = {
+         ai = no
+		 }
+			OR = {
+			 has_age_ability = ab_burgundy_merc_manpower
+			 has_age_ability = ab_hesse_mercs
+			} 
+			 NOT = {  has_country_modifier = increased_merc_quality }
+			NOT = {  has_country_modifier = We_stand_alone }
+			NOT = { 	check_variable = {
+								which = availablegeckomercs
+								value = 1.15
+							}
+			}
+	}		
+		hidden = yes
+	mean_time_to_happen = {
+			days = 1
+	}
+
+	immediate = {
+
+			set_variable = {            
+						which = availablegeckomercs
+						value = 1.15
+				}
+
+	}
+	option = {	
+	}
+}
+###########over merc FL##########################
+country_event = {
+    id = gecko.38
+   title = gecko.38.t
+    desc = gecko.38.d
+    picture = LAND_MILITARY_eventPicture
+
+   trigger = {
+		has_country_modifier = Over_merc_limit
+	}		
+		
+	mean_time_to_happen = {
+			days = 180
+	}
+
+	immediate = {
+		remove_country_modifier  = gc_mecca_agreement
+
+	}
+	option = {
+		name = gecko.38.a
+		
+		#nothing
+	}
+}
+
+###merc modifying event###
+country_event = {
+	id = gecko.39
+	title = gecko.39.title
+	desc = gecko.39.desc
+	picture = LAND_MILITARY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = gecko.39.a #5 mercs
+		trigger = {
+			capital_scope = {
+						controlled_by = ROOT
+						has_siege = no
+						unit_in_battle = no
+				}
+				
+			NOT = {
+						check_variable = {
+							which = geckomercvalue
+							which = geckomercFL
+						}
+					}
+		}
+			capital_scope = {
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+
+					every_neighbor_province	= {
+						limit = {
+						 OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							controlled_by = ROOT
+							}	
+						}
+						add_province_modifier = {
+							name = "merc_recruited"
+							duration = 30
+						}
+					}
+			}
+			if = {
+				limit = {
+						has_country_modifier = Minor
+					}
+				add_years_of_income = -0.375	
+			}
+			else = {	
+				add_treasury = -125
+			}
+			add_country_modifier = {
+				name = "mercs_spawned"
+				duration = 30
+				hidden = yes
+			}	
+			hidden_effect = {
+				export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+					}
+			}
+	}
+	option = {
+		name = gecko.39.b #10 mercs
+		trigger = {
+			
+			capital_scope = {
+						controlled_by = ROOT
+						has_siege = no
+						unit_in_battle = no
+				}
+					
+			NOT = {
+						check_variable = {
+							which = geckomercvalue
+							which = geckomercFL
+						}
+					}
+		}
+		capital_scope = {
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+
+
+					every_neighbor_province	= {
+						limit = {
+						 OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							controlled_by = ROOT
+							}	
+						}
+						add_province_modifier = {
+							name = "merc_recruited"
+							duration = 30
+						}
+					}
+		}			
+			if = {
+				limit = {
+						has_country_modifier = Minor
+					}
+				add_years_of_income = -0.75	
+			}
+			else = {	
+				add_treasury = -250
+			}
+			add_country_modifier = {
+				name = "mercs_spawned"
+				duration = 30
+				hidden = yes
+			}
+			hidden_effect = {
+				export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+					}
+			}
+	}
+	option = {
+		name = gecko.39.c #15 mercs
+		trigger = {
+	
+			capital_scope = {
+						controlled_by = ROOT
+						has_siege = no
+						unit_in_battle = no
+				}
+					
+			NOT = {
+						check_variable = {
+							which = geckomercvalue
+							which = geckomercFL
+						}
+					}
+		}
+		capital_scope = {
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+
+					every_neighbor_province	= {
+						limit = {
+						 OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							controlled_by = ROOT
+							}	
+						}
+						add_province_modifier = {
+							name = "merc_recruited"
+							duration = 30
+						}
+					}
+		}			
+			if = {
+				limit = {
+						has_country_modifier = Minor
+					}
+				add_years_of_income = -1.125
+			}
+			else = {	
+				add_treasury = -375
+			}
+			add_country_modifier = {
+				name = "mercs_spawned"
+				duration = 30
+				hidden = yes
+			}
+			hidden_effect = {
+				export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+					}
+			}
+	}
+	option = {
+		name = gecko.39.d #20 mercs
+		trigger = {
+			
+			capital_scope = {
+						controlled_by = ROOT
+						has_siege = no
+						unit_in_battle = no
+				}
+				
+			NOT = {
+						check_variable = {
+							which = geckomercvalue
+							which = geckomercFL
+						}
+					}
+		}
+		capital_scope = {
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+
+					every_neighbor_province	= {
+						limit = {
+						 OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							controlled_by = ROOT
+							}	
+						}
+						add_province_modifier = {
+							name = "merc_recruited"
+							duration = 30
+						}
+					}
+		}			
+			if = {
+				limit = {
+						has_country_modifier = Minor
+					}
+				add_years_of_income = -1.5
+			}
+			else = {	
+				add_treasury = -500
+			}
+			add_country_modifier = {
+				name = "mercs_spawned"
+				duration = 30
+				hidden = yes
+			}
+			hidden_effect = {
+				export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+					}
+			}
+	}
+	option = {
+		name = gecko.39.e #25 mercs
+		trigger = {
+	
+			capital_scope = {
+						controlled_by = ROOT
+						has_siege = no
+						unit_in_battle = no
+				}
+					
+			NOT = {
+						check_variable = {
+							which = geckomercvalue
+							which = geckomercFL
+						}
+					}
+		}
+		capital_scope = {
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+
+					every_neighbor_province	= {
+						limit = {
+						 OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							controlled_by = ROOT
+							}	
+						}
+						add_province_modifier = {
+							name = "merc_recruited"
+							duration = 30
+						}
+					}
+		}			
+			if = {
+				limit = {
+						has_country_modifier = Minor
+					}
+				add_years_of_income = -1.875
+			}
+			else = {	
+				add_treasury = -625
+			}
+			add_country_modifier = {
+				name = "mercs_spawned"
+				duration = 30
+				hidden = yes
+			}
+			hidden_effect = {
+				export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+					}
+			}
+	}
+	option = {
+		name = gecko.39.f #30 mercs
+		trigger = {
+			
+			capital_scope = {
+						controlled_by = ROOT
+						has_siege = no
+						unit_in_battle = no
+				}
+					
+			NOT = {
+						check_variable = {
+							which = geckomercvalue
+							which = geckomercFL
+						}
+					}
+		}
+		capital_scope = {
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					every_neighbor_province	= {
+						limit = {
+						 OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							controlled_by = ROOT
+							}	
+						}
+						add_province_modifier = {
+							name = "merc_recruited"
+							duration = 30
+						}
+					}
+		}			
+			if = {
+				limit = {
+						has_country_modifier = Minor
+					}
+				add_years_of_income = -2.25
+			}
+			else = {	
+				add_treasury = -750
+			}
+			add_country_modifier = {
+				name = "mercs_spawned"
+				duration = 30
+				hidden = yes
+			}
+			hidden_effect = {
+				export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+					}
+			}
+	}
+	option = {
+		name = gecko.39.g #35 mercs
+		trigger = {
+			
+			check_variable = {
+							which = geckomercFL
+							value = 35
+						}
+							
+			capital_scope = {
+						controlled_by = ROOT
+						has_siege = no
+						unit_in_battle = no
+				}
+			NOT = {
+						check_variable = {
+							which = geckomercvalue
+							which = geckomercFL
+						}
+					}
+		}
+		capital_scope = {
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+
+					every_neighbor_province	= {
+						limit = {
+						 OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							controlled_by = ROOT
+							}	
+						}
+						add_province_modifier = {
+							name = "merc_recruited"
+							duration = 30
+						}
+					}
+		}			
+			if = {
+				limit = {
+						has_country_modifier = Minor
+					}
+				add_years_of_income = -2.625
+			}
+			else = {	
+				add_treasury = -875
+			}
+			add_country_modifier = {
+				name = "mercs_spawned"
+				duration = 30
+				hidden = yes
+			}
+			hidden_effect = {
+				export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+					}
+			}
+	}
+	option = {
+		name = gecko.39.h #40 mercs
+		trigger = {
+			
+			check_variable = {
+							which = geckomercFL
+							value = 40
+						}
+						
+					
+			capital_scope = {
+						controlled_by = ROOT
+						has_siege = no
+						unit_in_battle = no
+				}
+			NOT = {
+						check_variable = {
+							which = geckomercvalue
+							which = geckomercFL
+						}
+					}
+		}
+		capital_scope = {
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+
+					every_neighbor_province	= {
+						limit = {
+						 OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							controlled_by = ROOT
+							}	
+						}
+						add_province_modifier = {
+							name = "merc_recruited"
+							duration = 30
+						}
+					}
+		}			
+			if = {
+				limit = {
+						has_country_modifier = Minor
+					}
+				add_years_of_income = -3
+			}
+			else = {	
+				add_treasury = -1000
+			}
+			add_country_modifier = {
+				name = "mercs_spawned"
+				duration = 30
+				hidden = yes
+			}
+			hidden_effect = {
+				export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+					}
+			}
+	}
+	option = {
+		name = gecko.39.i #45 mercs
+		trigger = {
+			
+			check_variable = {
+							which = geckomercFL
+							value = 45
+						}
+					
+			capital_scope = {
+						controlled_by = ROOT
+						has_siege = no
+						unit_in_battle = no
+				}
+			NOT = {
+						check_variable = {
+							which = geckomercvalue
+							which = geckomercFL
+						}
+					}
+		}
+		capital_scope = {
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+
+					every_neighbor_province	= {
+						limit = {
+						 OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							controlled_by = ROOT
+							}	
+						}
+						add_province_modifier = {
+							name = "merc_recruited"
+							duration = 30
+						}
+					}
+		}			
+			if = {
+				limit = {
+						has_country_modifier = Minor
+					}
+				add_years_of_income = -3.375
+			}
+			else = {	
+				add_treasury = -1125
+			}
+			add_country_modifier = {
+				name = "mercs_spawned"
+				duration = 30
+				hidden = yes
+			}
+			hidden_effect = {
+				export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+					}
+			}
+	}
+	option = {
+		name = gecko.39.j #50 mercs
+		trigger = {
+			
+			check_variable = {
+							which = geckomercFL
+							value = 50
+						}
+					
+			capital_scope = {
+						controlled_by = ROOT
+						has_siege = no
+						unit_in_battle = no
+				}
+			NOT = {
+						check_variable = {
+							which = geckomercvalue
+							which = geckomercFL
+						}
+					}
+		}
+		capital_scope = {
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					every_neighbor_province	= {
+						limit = {
+						 OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							controlled_by = ROOT
+							}	
+						}
+						add_province_modifier = {
+							name = "merc_recruited"
+							duration = 30
+						}
+					}
+		}			
+			if = {
+				limit = {
+						has_country_modifier = Minor
+					}
+				add_years_of_income = -3.75
+			}
+			else = {	
+				add_treasury = -1250
+			}  
+			add_country_modifier = {
+				name = "mercs_spawned"
+				duration = 365
+				hidden = yes
+			}
+			hidden_effect = {
+				export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+					}
+			}
+	}
+	option = {
+		name = gecko.39.k #100 mercs
+		trigger = {
+			
+			check_variable = {
+							which = geckomercFL
+							value = 50
+						}
+					
+			capital_scope = {
+						controlled_by = ROOT
+						has_siege = no
+						unit_in_battle = no
+				}
+			NOT = {
+						check_variable = {
+							which = geckomercvalue
+							which = geckomercFL
+						}
+					}
+		}
+		capital_scope = {
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					every_neighbor_province	= {
+						limit = {
+						 OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							controlled_by = ROOT
+							}	
+						}
+						add_province_modifier = {
+							name = "merc_recruited"
+							duration = 30
+						}
+					}
+		}			
+				add_treasury = -2500
+			 
+			add_country_modifier = {
+				name = "mercs_spawned"
+				duration = 365
+				hidden = yes
+			}
+			hidden_effect = {
+				export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+					}
+			}
+	}
+	option = {
+		name = gecko.39.l #200 mercs
+		trigger = {
+			
+			check_variable = {
+							which = geckomercFL
+							value = 50
+						}
+					
+			capital_scope = {
+						controlled_by = ROOT
+						has_siege = no
+						unit_in_battle = no
+				}
+			NOT = {
+						check_variable = {
+							which = geckomercvalue
+							which = geckomercFL
+						}
+					}
+		}
+		capital_scope = {
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					mercenary_infantry = PREV
+					every_neighbor_province	= {
+						limit = {
+						 OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							controlled_by = ROOT
+							}	
+						}
+						add_province_modifier = {
+							name = "merc_recruited"
+							duration = 30
+						}
+					}
+		}			
+				add_treasury = -5000
+		  
+			add_country_modifier = {
+				name = "mercs_spawned"
+				duration = 365
+				hidden = yes
+			}
+			hidden_effect = {
+				export_to_variable = {
+						which = geckomercvalue
+						value = trigger_value:num_of_mercenaries
+						who = ROOT
+					}
+			}
+	}
+	option = {
+		name = gecko.39.m
+		
+		#nothing
+		remove_country_modifier = merc_spawn_timer
+	}
+}
+######remove excess mercs########
+
+country_event = {
+    id = gecko.40
+   title = gecko.40.t
+    desc = gecko.40.d
+	picture = COURT_eventPicture
+
+   trigger = {
+			ROOT = {
+				ai = no
+			}
+			any_owned_province = {
+				has_province_modifier = "merc_recruited"
+			}	
+		check_variable = {
+						which = geckomercvalue
+						which = geckomercFL
+		}
+	}		
+	hidden = yes
+	mean_time_to_happen = {
+			days = 1
+	}
+
+	immediate = {
+		capital_scope = {
+			kill_units = {
+				who = controller
+				type = infantry
+				amount = 1
+			}
+			every_neighbor_province	= {
+						limit = {
+						 OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							controlled_by = ROOT
+							}	
+						}
+						if = {
+							limit = {
+								has_province_modifier = "merc_recruited"
+							}
+							extend_province_modifier = { name = "merc_recruited" duration = 30 }
+						}
+			}
+		}
+		if = {
+				limit = {
+						has_country_modifier = Minor
+					}
+				add_years_of_income = 0.075	
+			}
+			else = {	
+				add_treasury = 25
+			}
+	}
+	option = {	
+	}
+}
+
+country_event = {
+	id = mjl_events.4
+	title = "mjl_events.EVTNAME4"
+	desc = "mjl_events.EVTDESC4"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		has_dlc = "Cradle of Civilization"
+		religion_group = muslim
+		NOT = { has_country_flag = mjl_1444_change_school }
+	}
+	option = {
+		name = "mjl_events.EVTOPTA4"
+		trigger = {
+			NOT = { religion = shiite }
+		}
+		set_religious_school = {
+			group = muslim
+			school = hanafi_school
+		}
+		set_country_flag = mjl_1444_change_school
+	}
+	option = {
+		name = "mjl_events.EVTOPTB4"
+		trigger = {
+			NOT = { religion = shiite }
+		}
+		set_religious_school = {
+			group = muslim
+			school = hanbali_school
+		}
+		set_country_flag = mjl_1444_change_school
+	}
+	option = {
+		name = "mjl_events.EVTOPTC4"
+		trigger = {
+			NOT = { religion = shiite }
+		}
+		set_religious_school = {
+			group = muslim
+			school = maliki_school
+		}
+		set_country_flag = mjl_1444_change_school
+	}
+	option = {
+		name = "mjl_events.EVTOPTD4"
+		trigger = {
+			NOT = { religion = shiite }
+		}
+		set_religious_school = {
+			group = muslim
+			school = shafii_school
+		}
+		set_country_flag = mjl_1444_change_school
+	}
+	option = {
+		name = "mjl_events.EVTOPTE4"
+		trigger = {
+			NOT = { religion = sunni }
+		}
+		set_religious_school = {
+			group = muslim
+			school = jafari_school
+		}
+		set_country_flag = mjl_1444_change_school
+	}
+	option = {
+		name = "mjl_events.EVTOPTF4"
+		trigger = {
+			NOT = { religion = sunni }
+		}
+		set_religious_school = {
+			group = muslim
+			school = ismaili_school
+		}
+		set_country_flag = mjl_1444_change_school
+	}
+	option = {
+		name = "mjl_events.EVTOPTG4"
+		trigger = {
+			NOT = { religion = sunni }
+		}
+		set_religious_school = {
+			group = muslim
+			school = zaidi_school
+		}
+		set_country_flag = mjl_1444_change_school
+	}
+}
+
+country_event = {
+	id = mjl_events.5
+	title = "mjl_events.EVTNAME5"
+	desc = "mjl_events.EVTDESC5"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "mjl_events.EVTOPTA5"
+		trigger = {
+			NOT = { religion = shiite }
+		}
+		set_religious_school = {
+			group = muslim
+			school = hanafi_school
+		}
+		set_country_flag = mjl_1444_change_school
+	}
+	option = {
+		name = "mjl_events.EVTOPTB5"
+		trigger = {
+			NOT = { religion = shiite }
+		}
+		set_religious_school = {
+			group = muslim
+			school = hanbali_school
+		}
+		set_country_flag = mjl_1444_change_school
+	}
+	option = {
+		name = "mjl_events.EVTOPTC5"
+		trigger = {
+			NOT = { religion = shiite }
+		}
+		set_religious_school = {
+			group = muslim
+			school = maliki_school
+		}
+		set_country_flag = mjl_1444_change_school
+	}
+	option = {
+		name = "mjl_events.EVTOPTD5"
+		trigger = {
+			NOT = { religion = shiite }
+		}
+		set_religious_school = {
+			group = muslim
+			school = shafii_school
+		}
+		set_country_flag = mjl_1444_change_school
+	}
+	option = {
+		name = "mjl_events.EVTOPTE5"
+		trigger = {
+			NOT = { religion = sunni }
+		}
+		set_religious_school = {
+			group = muslim
+			school = jafari_school
+		}
+		set_country_flag = mjl_1444_change_school
+	}
+	option = {
+		name = "mjl_events.EVTOPTF5"
+		trigger = {
+			NOT = { religion = sunni }
+		}
+		set_religious_school = {
+			group = muslim
+			school = ismaili_school
+		}
+		set_country_flag = mjl_1444_change_school
+	}
+	option = {
+		name = "mjl_events.EVTOPTG5"
+		trigger = {
+			NOT = { religion = sunni }
+		}
+		set_religious_school = {
+			group = muslim
+			school = zaidi_school
+		}
+		set_country_flag = mjl_1444_change_school
+	}
+}
