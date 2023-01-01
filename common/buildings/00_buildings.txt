@@ -1687,9 +1687,8 @@ ramparts = {
 		all
 	}
 	modifier = {
-		local_hostile_attrition = 1
-		local_defensiveness = 0.15
-		local_defender_dice_roll_bonus = 1
+		local_hostile_attrition = 2
+		local_defensiveness = 0.50
 	}
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
@@ -1833,14 +1832,14 @@ state_house = {
 	}
 
 	modifier = {
-		statewide_governing_cost = -0.2
+		statewide_governing_cost = -0.10
 		min_local_autonomy = -5
 		local_governing_cost = -0.15
 		local_governing_cost_increase = -10
 		allowed_num_of_buildings = 1
 	}
 	bonus_modifier = {
-		statewide_governing_cost = -0.2
+		statewide_governing_cost = -0.10
 		min_local_autonomy = -5
 		local_governing_cost = -0.15
 		local_governing_cost_increase = -10
