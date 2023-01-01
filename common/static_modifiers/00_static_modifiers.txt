@@ -1294,6 +1294,7 @@ new_world_exploitation_modifier = {
 crown_colony_overlord = {
 	merchants = 1
 	global_trade_power = 0.05
+	vassal_forcelimit_bonus	= -0.05
 }
 
 private_enterprise_overlord = {
