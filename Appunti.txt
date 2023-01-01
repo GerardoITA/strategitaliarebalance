@@ -33,6 +33,7 @@ Idee
 
 Tech
 #---| Africani con feudalesimo e tech 3
+#---| Africani una volta imbracciato l'illuminismo, diventare western
 
 Generale
 #---| Cambia expand infra in gecko
