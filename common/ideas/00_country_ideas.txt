@@ -3564,8 +3564,8 @@ SWI_ideas = {
 	}
 	free = yes  #will be triggered at load
 	
-	swiss_mercenaries = {
-		mercenary_discipline = 0.05
+	clockwork = {
+		production_efficiency = 0.1
 	}
 	swiss_tolerance = {
 		tolerance_heretic = 2
@@ -3583,8 +3583,8 @@ SWI_ideas = {
 	haven_for_refugees = {
 		prestige = 1
 	}
-	clockwork = {
-		production_efficiency = 0.1
+	swiss_mercenaries = {
+		mercenary_discipline = 0.1
 	}
 }
 
@@ -15323,7 +15323,7 @@ CLI_ideas = {
 
 WES_ideas = {
 	start = {
-		diplomats = 1
+		land_morale = 0.15
 		land_forcelimit_modifier = 0.2
 	}
 	bonus = {
