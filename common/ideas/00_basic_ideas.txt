@@ -1018,10 +1018,10 @@ administrative_ideas = {
 		interest = -0.5
 	}
 	organised_mercenary_recruitment = {
-		mercenary_discipline = 0.025
+		mercenary_discipline = 0.05
 	}
 	administrative_efficiency_idea = {
-		advisor_pool = 1
+		governing_capacity  = 500
 	}
 	civil_servants = {
 		adm_tech_cost_modifier = -0.1
