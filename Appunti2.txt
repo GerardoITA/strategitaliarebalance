@@ -28,13 +28,13 @@ STRETTI!!!
 - nerf Prussia 
 - nerf courthouses -12,5% e town hall -25%
 - nerf statehouse 
-- remove siam's +1cav fire and make cav power 25% instead of 15%
+- halve siam's +1cav
 - double fort garrison
 - per formare Germania serve tutta germania 1870
 #- togliere vassal force limit a influence e policy varie
-- ogni colonia toglie 5% vassal force limit contribution
+#- ogni colonia toglie 5% vassal force limit contribution
 #- crown colony da 10% manpower e 10% force limit 
 #- nerf idee coloniali a -40% manpower ( togliere manpower recovery ) e -40% force limit navale e terrestre
 #- self governing colony non da dev cost ma da 20% manpower e 20% force limit navale e terrestre e 5% disciplina e rimuovere liberty desire 
 #- guarda anche riforme di govern self governing e crown 
-- togliere interazione march da crown colony 
+#- togliere interazione march da crown colony 
