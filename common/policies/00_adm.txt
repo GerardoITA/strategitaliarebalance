@@ -720,7 +720,7 @@ vassal_obligations_act = {
 	}	
 	
 	vassal_income = 0.25
-	vassal_forcelimit_bonus = 1
+	land_forcelimit_modifier  = 0.1
 	
 	ai_will_do = {
 		factor = 1
