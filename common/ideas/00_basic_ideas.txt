@@ -1106,7 +1106,7 @@ influence_ideas = {
 		envoy_travel_time = -0.25
 	}
 	marcher_lords = {
-		vassal_forcelimit_bonus = 1
+		land_forcelimit_modifier  = 0.33
 	}
 
 	ai_will_do = {
