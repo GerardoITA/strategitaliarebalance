@@ -1949,8 +1949,7 @@ JAP_ideas = {
 		global_institution_spread = 0.1
 	}
 	jap_maritime_legacy = {
-		ship_durability = 0.20
-		naval_morale = 0.1
+		naval_morale = 0.15
 	}
 	jap_land_of_the_rising_sun = {
 		prestige = 1
