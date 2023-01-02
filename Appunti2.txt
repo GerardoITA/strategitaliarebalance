@@ -2,6 +2,7 @@
 - rifai zone coloniali 
 
 - rampart diventa 50% defensiveness, +2 max attrition e +2 attrition 
+- rampart double garrison size?
 
 - fix stackwipes
 
@@ -25,11 +26,12 @@ STRETTI!!!
 
 - formable per austria?
 - nerf cavalleria?
-- nerf Prussia 
-- nerf courthouses -12,5% e town hall -25%
-- nerf statehouse 
-- halve siam's +1cav
-- double fort garrison
+#- nerf Prussia
+#-buff westphalia 
+#- nerf courthouses -12,5% e town hall -25%
+#- nerf statehouse 
+#- halve siam's +1cav
+- dare riforma di governo ottomana ultimo tier con 10% morale of armies
 - per formare Germania serve tutta germania 1870
 #- togliere vassal force limit a influence e policy varie
 #- ogni colonia toglie 5% vassal force limit contribution
@@ -38,3 +40,8 @@ STRETTI!!!
 #- self governing colony non da dev cost ma da 20% manpower e 20% force limit navale e terrestre e 5% disciplina e rimuovere liberty desire 
 #- guarda anche riforme di govern self governing e crown 
 #- togliere interazione march da crown colony 
+
+- rework monumenti?
+
+
+- remove policieeeeees
