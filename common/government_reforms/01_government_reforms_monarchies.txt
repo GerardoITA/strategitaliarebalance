@@ -359,6 +359,9 @@ celestial_empire = {
 		manpower_recovery_speed = 0.25
 		land_morale = 0.2
 		governing_capacity = 500
+		monarch_admin_power = 1
+		monarch_military_power = 1
+		monarch_diplomatic_power = 1
 	}
 	
 	ai = {
@@ -372,7 +375,7 @@ celestial_empire = {
 
 	conditional = {
 		allow = { has_dlc = "Mandate of Heaven" }
-		has_meritocracy = yes
+		has_meritocracy = no
 		factions = {}
 	}
 }
@@ -416,24 +419,12 @@ chinese_warlord = {
 	}
 	trigger = {
 		OR = {
-			primary_culture = bai
-			primary_culture = miao
-			primary_culture = yi
-			culture_group = east_asian
-		}
-		OR = {
-			AND = {
-				OR = {
-					primary_culture = miao
-					primary_culture = yi
-				}
-				religion = animism
-			}
-			AND = {
-				primary_culture = bai
-				religion = buddhism
-			}
-			religion = confucianism
+			tag = YUE
+			tag = YUE
+			tag = CSH
+			tag = WUU
+			tag = CF0
+			tag = CF1
 		}
 		technology_group = chinese
 		capital_scope = {
@@ -779,7 +770,9 @@ prussian_monarchy = {
 		nobles_loyalty_modifier = 0.1
 		governing_capacity_modifier = -0.5
 	}
-
+	custom_attributes = {
+		locked_government_type = yes
+	}
 	conditional = {
 		allow = { has_dlc = "Rights of Man" }
 		militarised_society = yes
