@@ -1,0 +1,61 @@
+country_decisions = {
+
+	huanghe_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_huanghe_flag }
+			OR {
+						tag = WUU
+						tag = YUE
+						tag = CSH
+						tag = YAN
+			}
+			NOT = { exists = BUK }
+			NOT = { has_country_flag = huanghe_nation }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1816
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			has_institution = feudalism
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1816
+		}
+		effect = {
+			set_country_flag = formed_huanghe_flag
+			change_tag = CF1
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { has_global_flag = huanghe_nation }
+				}
+			}
+			set_global_flag = huanghe_nation
+			set_country_flag = formed_huanghe_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

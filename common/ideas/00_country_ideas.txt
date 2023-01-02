@@ -2668,10 +2668,10 @@ QNG_ideas = {
 	
 	
 	expand_the_banners = {
-		land_forcelimit_modifier = 0.33
+		land_forcelimit_modifier = 0.5
 	}
 	the_green_standard_army = {
-		global_manpower_modifier = 0.2
+		global_manpower_modifier = 0.5
 	}
 	pigtail_or_death = {
 		stability_cost_modifier = -0.1

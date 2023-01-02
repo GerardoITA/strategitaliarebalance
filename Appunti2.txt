@@ -43,5 +43,6 @@ STRETTI!!!
 
 - rework monumenti?
 - IMPORTANTE fix culture delle minor cinesi
+- fix missioni qing ( troppo op )
 
 - remove policieeeeees
