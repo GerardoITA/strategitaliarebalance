@@ -1,8 +1,8 @@
 #695 - Hebei
 
-owner = 
-controller = 
-add_core = 
+owner = YAN
+controller = YAN
+add_core = YAN
 culture = chihan
 religion = confucianism
 capital = "Hejian"

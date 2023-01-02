@@ -316,18 +316,8 @@ celestial_empire = {
 			limit = {
 				has_dlc = "Mandate of Heaven"
 			}
-			is_emperor_of_china = yes
+			tag = QNG
 		}
-		else = {
-			OR = {
-				has_reform = celestial_empire
-				AND = {
-					culture_group = east_asian
-					num_of_cities = 50
-				}
-			}
-		}
-		NOT = { has_global_flag = empire_of_china_dismantled }
 	}
 	legacy_equivalent = celestial_empire_legacy
 	maintain_dynasty = yes
@@ -419,7 +409,7 @@ chinese_warlord = {
 	}
 	trigger = {
 		OR = {
-			tag = YUE
+			tag = YAN
 			tag = YUE
 			tag = CSH
 			tag = WUU

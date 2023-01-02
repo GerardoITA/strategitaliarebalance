@@ -1,8 +1,8 @@
 # 2136 - Xuanhua
 
-owner = 
-controller = 
-add_core = 
+owner = YAN
+controller = YAN
+add_core = YAN
 culture = jin
 religion = confucianism
 capital = "Xuanhua"

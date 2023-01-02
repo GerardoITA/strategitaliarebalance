@@ -6,7 +6,7 @@
 
 ### Nation specific idea groups
 
-upgraded_chinese_ideas = {
+upgraded_china_ideas = {
 	start = {
 		land_forcelimit_modifier = 0.25
 		technology_cost = -0.1
@@ -24,26 +24,26 @@ upgraded_chinese_ideas = {
 	}
 	free = yes
 	
-	firearm_training = {
+	firearm_training_two = {
 		infantry_fire = 0.2
 		fire_damage = 0.1
 	}
-	keju_examination = {
+	keju_examination_two = {
 		legitimacy = 1
 	}
-	son_of_heaven = {
+	son_of_heaven_two = {
 		discipline = 0.05
 	}
-	scholar_gentry = {
+	scholar_gentry_two = {
 		stability_cost_modifier = -0.1
 	}
-	order_of_four_occupations = {
+	order_of_four_occupations_two = {
 		trade_efficiency = 0.1
 	}
-	nation_of_rites_and_etiquette = {
+	nation_of_rites_and_etiquette_two = {
 		prestige = 1
 	}
-	middle_kingdom = {
+	middle_kingdom_two = {
 		production_efficiency = 0.15
 	}
 }
