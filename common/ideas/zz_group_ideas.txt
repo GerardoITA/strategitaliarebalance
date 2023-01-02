@@ -1670,11 +1670,10 @@ chinese_ideas = {
 	free = yes
 	
 	firearm_training = {
-		infantry_power = 0.05
-		fire_damage = 0.1
+		infantry_fire = 0.1
 	}
 	keju_examination = {
-		advisor_pool = 1
+		fire_damage = 0.05
 	}
 	son_of_heaven = {
 		discipline = 0.05
