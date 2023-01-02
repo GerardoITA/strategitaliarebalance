@@ -24,10 +24,3 @@ l_english:
  gecko_merc_limit_tt:0 "Manually Update Mercenary Forcelimit"
  gecko_increased_merc_limit_tt:0 "This will §GIncrease our Available Mercenaries by +15%§!, but they will have -§R15.0% Morale§! for 10 Years."
  gecko_decreased_merc_limit_tt:0 "This will §RDecrease our Available Mercenaries by -15%§!, but they will have +§G10.0% Combat Ability§! for 10 Years."
-
-
- #china
- huanghe_nation_title:0 "Form the Kingdom of Huanghe"
- huanghe_nation_desc:0 "We have unified the Valley of the Yellow River, it's time for us chinese to use our proverbial creativity and call ourselves the Kingdom of the Yellow River"
- yangtze_nation_title:0 "Form the Kingdom of Yangtze"
- yangtze_nation_title:0 "We have unified the Valley of the Yangtze River, it's time for us chinese to use our proverbial creativity and call ourselves the Kingdom of the Yangtze River"

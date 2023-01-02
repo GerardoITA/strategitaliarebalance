@@ -1098,5 +1098,5 @@ ISR = "countries/Israel.txt"
 
 
 #Mod 
-CF0 = "countries/GuangxiClique.txt"
+CF0 = "countries/Yangtze.txt"
 CF1 = "countries/Huanghe.txt"
