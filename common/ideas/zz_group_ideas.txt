@@ -1654,11 +1654,11 @@ shan_ideas = {
 chinese_ideas = {
 	start = {
 		manpower_recovery_speed = 0.1
-		technology_cost = -0.1
+		technology_cost = -0.05
 	}
 	
 	bonus = {
-		global_manpower_modifier = 0.25
+		global_manpower_modifier = 0.10
 	}
 	
 	trigger = {
@@ -1670,26 +1670,26 @@ chinese_ideas = {
 	free = yes
 	
 	firearm_training = {
-		infantry_power = 0.1
+		infantry_power = 0.05
+		fire_damage = 0.1
 	}
 	keju_examination = {
 		advisor_pool = 1
+	}
+	son_of_heaven = {
+		discipline = 0.05
 	}
 	scholar_gentry = {
 		stability_cost_modifier = -0.1
 	}
 	order_of_four_occupations = {
-		production_efficiency = 0.10
+		trade_efficiency = 0.05
 	}
 	nation_of_rites_and_etiquette = {
 		prestige = 1
 	}
-	son_of_heaven = {
-		legitimacy = 1
-		imperial_mandate = 0.05
-	}
 	middle_kingdom = {
-		discipline = 0.05
+		production_efficiency = 0.1
 	}
 }
 
