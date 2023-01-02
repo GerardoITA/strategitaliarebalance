@@ -1,8 +1,8 @@
 #1821 - Nanjing
 
-owner = WUU
-controller = WUU
-add_core = WUU
+owner = 
+controller = 
+add_core = 
 culture = jianghuai
 religion = confucianism
 capital = "Nanjing"

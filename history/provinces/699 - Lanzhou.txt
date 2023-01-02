@@ -12,7 +12,7 @@ base_tax = 6
 base_production = 6
 base_manpower = 3
 is_city = yes
-add_core = CSH
+add_core = 
 
 
 
@@ -22,9 +22,9 @@ discovered_by = nomad_group
 
 1644.1.1 = {
 	revolt_risk = 0
-	owner = CSH
-	controller = CSH
-	add_core = CSH
+	owner = 
+	controller = 
+	add_core = 
 } # Li Zicheng's Shun empire
 1645.2.1 = {
 	owner = QNG
