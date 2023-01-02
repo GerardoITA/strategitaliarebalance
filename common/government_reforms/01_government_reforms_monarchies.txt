@@ -357,7 +357,7 @@ celestial_empire = {
 
 	modifiers = {
 		manpower_recovery_speed = 0.25
-		land_morale = 0.2
+		land_morale = 0.1
 		governing_capacity = 500
 		monarch_admin_power = 1
 		monarch_military_power = 1
