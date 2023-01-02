@@ -1,16 +1,16 @@
 # 2170 - Songqu
 
-owner = 
-controller = 
-add_core = 
+owner = CSH
+controller = CSH
+add_core = CSH
 culture = tibetan
 religion = vajrayana
 capital = "Songqu"
-trade_goods = livestock
+trade_goods = gold
 hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
+base_tax = 2 
+base_production = 4
+base_manpower = 2
 is_city = yes
 add_core = CXI
 discovered_by = chinese

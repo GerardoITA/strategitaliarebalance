@@ -1,8 +1,8 @@
 #680 - Chongqing
 
-owner = 
-controller = 
-add_core = 
+owner = CSH
+controller = CSH
+add_core = CSH
 culture = sichuanese
 religion = confucianism
 capital = "Chongqing"

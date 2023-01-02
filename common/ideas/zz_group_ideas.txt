@@ -1671,9 +1671,10 @@ chinese_ideas = {
 	
 	firearm_training = {
 		infantry_fire = 0.1
+		fire_damage = 0.05
 	}
 	keju_examination = {
-		fire_damage = 0.05
+		legitimacy = 1
 	}
 	son_of_heaven = {
 		discipline = 0.05

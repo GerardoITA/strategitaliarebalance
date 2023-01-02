@@ -42,6 +42,6 @@ STRETTI!!!
 #- togliere interazione march da crown colony 
 
 - rework monumenti?
-
+- IMPORTANTE fix culture delle minor cinesi
 
 - remove policieeeeees
