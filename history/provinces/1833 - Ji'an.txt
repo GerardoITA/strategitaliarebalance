@@ -2,7 +2,6 @@
 
 owner = NNG
 controller = NNG
-add_core = 
 culture = gan
 religion = confucianism
 capital = "Ji'an"

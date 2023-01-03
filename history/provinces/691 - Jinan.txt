@@ -2,7 +2,6 @@
 
 owner = QIC
 controller = QIC
-add_core = 
 culture = shandong_culture
 religion = confucianism
 capital = "Jinan"

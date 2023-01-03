@@ -2,7 +2,6 @@
 
 owner = NNG
 controller = NNG
-add_core = 
 culture = hakka
 religion = confucianism
 capital = "Ganzhou"

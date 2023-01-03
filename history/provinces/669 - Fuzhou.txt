@@ -1,8 +1,7 @@
 #669 - Fuzhou
 
 owner = MIN
-controller = MIN
-add_core = 
+controller = MIN 
 culture = chimin
 religion = confucianism
 capital = "Fuzhou"

@@ -2,7 +2,6 @@
 
 owner = CDL
 controller = CDL
-add_core = 
 culture = bai
 religion = buddhism
 capital = "Pu'er"

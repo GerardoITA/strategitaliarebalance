@@ -2,7 +2,6 @@
 
 owner = JIN
 controller = JIN
-add_core = 
 culture = jin
 religion = confucianism
 capital = "Pingyang"

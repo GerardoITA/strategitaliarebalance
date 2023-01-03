@@ -2,7 +2,6 @@
 
 owner = QIN
 controller = QIN
-add_core = 
 culture = jin
 religion = confucianism
 capital = "Yan'an"

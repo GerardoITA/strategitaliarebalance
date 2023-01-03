@@ -2,7 +2,6 @@
 
 owner = QIC
 controller = QIC
-add_core = 
 culture = zhongyuan
 religion = confucianism
 capital = "Yanzhou"

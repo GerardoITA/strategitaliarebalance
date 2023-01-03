@@ -2,7 +2,6 @@
 
 owner = LNG
 controller = LNG
-add_core = 
 culture = xibei
 religion = confucianism
 capital = "Hanzhong"
