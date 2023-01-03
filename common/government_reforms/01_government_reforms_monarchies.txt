@@ -359,12 +359,11 @@ celestial_empire = {
 
 	custom_attributes = {
 		locked_government_type = yes
-		has_unify_china_cb = yes
 	}
 
 	conditional = {
 		allow = { has_dlc = "Mandate of Heaven" }
-		has_meritocracy = no
+		has_meritocracy = yes
 		factions = {}
 	}
 }
@@ -475,7 +474,6 @@ chinese_warlord = {
 	}
 
 	custom_attributes = {
-		has_unify_china_cb = yes
 		locked_government_type = yes
 	}
 }
@@ -689,6 +687,7 @@ ottoman_government = {
 prussian_monarchy = {
 	icon = "prussian_monarchy"
 	allow_normal_conversion = yes
+	lock_level_when_selected = yes
 	potential = {
 		OR = {
 			AND = {

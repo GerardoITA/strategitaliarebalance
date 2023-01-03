@@ -3,7 +3,7 @@
 owner = JIN
 controller = JIN
 add_core = 
-culture = jin
+culture = chihan
 religion = confucianism
 capital = "Huaiqing"
 trade_goods = grain

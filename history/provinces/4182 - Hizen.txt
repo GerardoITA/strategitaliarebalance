@@ -2,7 +2,7 @@
 
 owner = OUC
 controller = OUC
-culture = kyuan
+culture = kyushuan
 religion = shinto
 capital = "Nagasaki"
 trade_goods = naval_supplies

@@ -44,5 +44,7 @@ STRETTI!!!
 - rework monumenti?
 - IMPORTANTE fix culture delle minor cinesi
 - fix missioni qing ( troppo op )
-
+- rendere LOCKED prussian government
+- fix mughal estates and buff mughal ideas
 - remove policieeeeees
+- nerf theocracy

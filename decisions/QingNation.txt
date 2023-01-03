@@ -1,0 +1,106 @@
+country_decisions = {
+
+form_qing = {
+		major = yes
+		potential = {
+		OR = { 
+			tag = CF0
+			tag = CF1
+		}
+
+			was_never_end_game_tag_trigger = yes
+			NOT = { exists = QNG }
+			NOT = { has_country_flag = qing_formed }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1816
+				province_id = 700
+				province_id = 2139
+				province_id = 2141
+				province_id = 667
+				province_id = 671
+				province_id = 662
+				province_id = 2151
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			owns_core_province = 667
+			owns_core_province = 671
+			owns_core_province = 662
+			owns_core_province = 2151
+			owns_core_province = 1816
+			owns_core_province = 2139
+			owns_core_province = 700
+			owns_core_province =  2141
+			is_at_war = no
+			is_free_or_tributary_trigger = y
+		}
+		effect = {
+			1816 = {
+				move_capital_effect = yes
+				change_culture = ROOT
+				add_core = QNG
+			}
+			change_tag = QNG
+			set_government_rank = 3
+			south_china_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QNG
+			}
+			xinan_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QNG
+			}
+			mongolia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QNG
+			}
+			tibet_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QNG
+			}
+			manchuria_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QNG
+			}
+			north_china_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QNG
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_government_reform = celestial_empire
+			if = {
+				limit = {
+					NOT = { religion = confucianism }
+				}
+				change_religion = confucianism
+			}
+			add_prestige = 10
+			set_country_flag = qing_formed
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
