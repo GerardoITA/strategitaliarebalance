@@ -1,8 +1,8 @@
 #662 - Yunnan
 
-owner = 
-controller = 
-add_core = 
+owner = CDL
+controller = CDL
+add_core = CDL
 culture = bai
 religion = buddhism
 capital = "Kunming"

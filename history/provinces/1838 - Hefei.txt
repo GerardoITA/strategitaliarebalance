@@ -1,8 +1,8 @@
 #1838 - Hefei
 
-owner = 
-controller = 
-add_core = 
+owner = CMI
+controller = CMI
+add_core = CMI
 culture = jianghuai
 religion = confucianism
 capital = "Hefei"

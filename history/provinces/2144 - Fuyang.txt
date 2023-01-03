@@ -1,8 +1,8 @@
 # 2144 - Fuyang
 
-owner = 
-controller = 
-add_core = 
+owner = TNG
+controller = TNG
+add_core = TNG
 culture = zhongyuan
 religion = confucianism
 capital = "Fuyang"

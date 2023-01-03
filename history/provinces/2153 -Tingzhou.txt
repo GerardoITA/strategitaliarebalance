@@ -1,7 +1,7 @@
 # 2153 - Tingzhou
 
-owner = 
-controller = 
+owner = MIN
+controller = MIN
 add_core = 
 culture = hakka
 religion = confucianism

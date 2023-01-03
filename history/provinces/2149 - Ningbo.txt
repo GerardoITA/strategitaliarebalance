@@ -1,8 +1,8 @@
 # 2149 - Ningbo
 
-owner = 
-controller = 
-add_core = 
+owner = CHC
+controller = CHC
+add_core = CHC
 culture = wu
 religion = confucianism
 capital = "Ningbo"

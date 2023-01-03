@@ -1,7 +1,7 @@
 #1833 - Ji'an
 
-owner = 
-controller = 
+owner = NNG
+controller = NNG
 add_core = 
 culture = gan
 religion = confucianism

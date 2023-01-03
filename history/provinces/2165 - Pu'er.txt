@@ -1,7 +1,7 @@
 # 2165 - Pu'er
 
-owner = 
-controller = 
+owner = CDL
+controller = CDL
 add_core = 
 culture = bai
 religion = buddhism

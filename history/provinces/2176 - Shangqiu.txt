@@ -1,8 +1,8 @@
 # 2176 - Shangqiu
 
-owner = 
-controller = 
-add_core = 
+owner = TNG
+controller = TNG
+add_core = TNG
 culture = zhongyuan
 religion = confucianism
 capital = "Shangqiu"
@@ -12,7 +12,7 @@ base_tax = 5
 base_production = 5
 base_manpower = 2
 is_city = yes
-add_core = LNG
+
 
 
 
@@ -21,7 +21,7 @@ discovered_by = nomad_group
 
 1608.1.1 = { discovered_by = SPA }
 
-1643.1.1 = { revolt = { } revolt_risk = 0 owner =  controller =  add_core =  } # The Shun dynasty of Li Zicheng
+1643.1.1 = { revolt = { } revolt_risk = 0 owner =  controller =  add_core =  } # The n dynasty of Li Zicheng
 1645.2.1 = {
 	owner = QNG
 	controller = QNG

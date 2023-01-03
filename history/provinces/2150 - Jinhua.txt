@@ -1,8 +1,8 @@
 # 2150 - Jinhua
 
-owner = 
-controller = 
-add_core = 
+owner = CHC
+controller = CHC
+add_core = CHC
 culture = wu
 religion = confucianism
 capital = "Jinhua"

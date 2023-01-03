@@ -2,7 +2,7 @@
 
 owner = SMZ
 controller = SMZ
-culture = kyushuan
+culture = kyuan
 religion = shinto
 capital = "Obi"
 trade_goods = livestock

@@ -1,8 +1,8 @@
 #4199 - Tongren
 
-owner = 
-controller = 
-add_core = 
+owner = HUA
+controller = HUA
+add_core = HUA
 culture = miao
 religion = animism
 capital = "Tongren"

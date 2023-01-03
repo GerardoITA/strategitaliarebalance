@@ -1,7 +1,7 @@
 # 2167 - Lijiang
 
-owner = 
-controller = 
+owner = CDL
+controller = CDL
 add_core = 
 add_core = CDL
 culture = bai

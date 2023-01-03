@@ -1,8 +1,8 @@
 #726 - Liaodong
 
-owner = 
-controller = 
-add_core = 
+owner = CYI
+controller = CYI
+add_core = CYI
 culture = manchu
 religion = confucianism
 capital = "Shenyang"

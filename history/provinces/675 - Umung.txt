@@ -1,9 +1,8 @@
 #675 - Qujing
 
-owner = 
-controller = 
-add_core = 
-add_core = CYI
+owner = CDL
+controller = CDL
+add_core = CDL
 culture = yi
 religion = animism
 capital = "Umung"
@@ -13,6 +12,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 3
 is_city = yes
+
 
 
 

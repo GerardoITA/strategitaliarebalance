@@ -1,8 +1,8 @@
-# No previous file for Goshute
+# No previous file for Gote
 
 culture = shoshone
 religion = totemism
-capital = "Goshute"
+capital = "Gote"
 trade_goods = unknown
 hre = no
 base_tax = 1 

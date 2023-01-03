@@ -37,7 +37,7 @@ discovered_by = north_american
 	#controller = GBR
 	#add_core GBR
 	is_city = yes
-	capital = "Upper Ashuelot"
+	capital = "Upper Aelot"
 	culture = english
 	religion = protestant
 	trade_goods = naval_supplies

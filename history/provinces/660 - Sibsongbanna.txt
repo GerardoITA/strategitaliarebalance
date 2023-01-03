@@ -1,4 +1,4 @@
-#660 - Xishuan Banna
+#660 - Xian Banna
 
 owner = MMA
 controller = MMA

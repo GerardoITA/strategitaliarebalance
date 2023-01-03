@@ -1,7 +1,7 @@
 #683 - Nanchang
 
-owner = 
-controller = 
+owner = NNG
+controller = NNG
 add_core = 
 culture = gan
 religion = confucianism
@@ -16,6 +16,7 @@ add_core = NNG
 discovered_by = chinese
 discovered_by = nomad_group
 center_of_trade = 1
+fort_15th = yes
 
 1513.1.1 = { unrest = 5 } # Peasant rebellion, Jiangxi
 1514.1.1 = { unrest = 0 }
