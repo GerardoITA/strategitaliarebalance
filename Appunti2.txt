@@ -31,7 +31,7 @@ STRETTI!!!
 #- nerf courthouses -12,5% e town hall -25%
 #- nerf statehouse 
 #- halve siam's +1cav
-- dare riforma di governo ottomana ultimo tier con 10% morale of armies
+- dare riforma di governo ottomana ultimo tier con 10% morale of armiese tier 7/8 riforma ottomana che da accesso al buff jannies
 - per formare Germania serve tutta germania 1870
 #- togliere vassal force limit a influence e policy varie
 #- ogni colonia toglie 5% vassal force limit contribution
@@ -42,9 +42,13 @@ STRETTI!!!
 #- togliere interazione march da crown colony 
 
 - rework monumenti?
-- IMPORTANTE fix culture delle minor cinesi
+#- IMPORTANTE fix culture delle minor cinesi
 - fix missioni qing ( troppo op )
-- rendere LOCKED prussian government
+#- rendere LOCKED prussian government
 - fix mughal estates and buff mughal ideas
 - remove policieeeeees
 - nerf theocracy
+
+- monarchia da 75 extra assolutismo, 2,5 admin efficiency in più o parlamento gratis
+- togliere assolutismo gratis per tutti
+- evento che da -0.15 autonomy e -10 years of separatism

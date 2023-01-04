@@ -546,7 +546,7 @@ scorched_earth = {
 ##########################################################################
 
 base_values = {
-	max_absolutism = 110
+	max_absolutism = 65
 	yearly_absolutism = 5.0
 	merchants = 2							#Start with 2 merchants
 	diplomats = 2							#Start with 2 diplomats..
