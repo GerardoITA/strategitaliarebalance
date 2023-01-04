@@ -3864,6 +3864,10 @@ regional_representation_reform = {
 		min_autonomy_in_territories = -0.05
 		core_creation = -0.05
 	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
 }
 
 peoples_kingdom_reform = {
