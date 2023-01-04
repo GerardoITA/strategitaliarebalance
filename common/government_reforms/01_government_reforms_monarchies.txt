@@ -3579,8 +3579,8 @@ royal_decree_reform = {
 		is_revolutionary = no
 	}
 	modifiers = {
-		max_absolutism = 5
-		yearly_absolutism = 0.5
+		max_absolutism = 35
+		yearly_absolutism = 5
 	}
 	ai = {
 		factor = 1
@@ -3947,8 +3947,8 @@ political_absolutism_reform = {
 		is_revolutionary = no
 	}
 	modifiers = {
-		administrative_efficiency = 0.025
-		max_absolutism = 5
+		administrative_efficiency = 0.05
+		max_absolutism = 50
 		#max_efficient_absolutism = 10	#For 1.35
 	}
 	ai = {
