@@ -1,5 +1,9 @@
 ﻿l_english:
  religion_enforced_edict:1 "Allows State Edict '§YReligion Enforced§!'\n (Resistance to Reformation: §G+100%§!)\n"
+ p_janissary_decadence:0 "Reformed Janissary"
+ strategitalia_colonist:0 "Bonus Colonie 2022"
+ strategitalia_colonist_tooltip:0 "And the best part is... it's FREE"
+ p_janissary_decadence_tooltip:0 "Even more disciplined and fearsome, our troops are a force to be reckoned with."
  PR_commandant_cooldown:0 "Inspirational Leader Cooldown"
  PR_commandant_cooldown_tooltip:0 "Perhaps another time..."
  PR_grand_captain_cooldown:0 "Grand Captain Cooldown"

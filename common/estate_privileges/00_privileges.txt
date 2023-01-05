@@ -2695,7 +2695,7 @@ estate_church_clerical_ministers = {
 estate_church_negative_piety_privilege = {
 	icon = privilege_recruit_minister
 	max_absolutism = -5
-	influence = 0.10
+	influence = 0.05
 	is_valid = {
 		religion_group = muslim
 	}
@@ -2722,19 +2722,6 @@ estate_church_clerical_oversight = {
 	benefits = {
 		
 		
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Wealth of Nations"
-			OR = {
-				religion = sunni
-				religion = ibadi
-				religion = shiite
-			}
-		}
-		modifier = {
-			monthly_piety = -0.02
-		}
 	}
 	ai_will_do = {
 		factor = 10

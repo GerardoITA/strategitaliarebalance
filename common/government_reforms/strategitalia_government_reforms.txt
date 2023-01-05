@@ -5,12 +5,11 @@ jannissary_reform = {
 		has_reform = ottoman_government
 	}
 	modifiers = {
-		land_morale = 0.1 
-		custom_attributes = {
-			jannissary_reform_privilege_interaction = yes 
-		}		
-		
+		land_morale = 0.1 		
 	}
+	custom_attributes = {
+			jannissary_reform_privilege_interaction = yes 
+		}
 	ai = {
 		factor = 1
 	}

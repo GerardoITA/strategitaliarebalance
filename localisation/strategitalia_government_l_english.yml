@@ -1,0 +1,5 @@
+l_english:
+ jannissary_reform:0 "Empower the Janissary"
+ jannissary_reform_desc:0 "By empowering our janissary, they will form a formidable combat force."
+ mechanic_jannissary_reform_privilege_interaction_yes: "Enables the Dhimmi Estate Privilege §YReform the Janissary§!, which grants §G10% Discipline§! to §YJanissary Regiments§!"
+ mechanic_jannissary_reform_privilege_interaction_no: " " 
