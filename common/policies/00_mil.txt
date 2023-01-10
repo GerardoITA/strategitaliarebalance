@@ -530,88 +530,88 @@ colonial_garrisons = {
 	}
 }
 
-the_maritime_intelligencer_unit = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = naval_ideas
-		has_idea_group = spy_ideas
-	}
-	
-	allow = {
-		full_idea_group = naval_ideas
-		full_idea_group = spy_ideas
-	}	
-	
-	siege_blockade_progress = 1
-	global_naval_engagement_modifier = 0.1
-	
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { num_of_heavy_ship = 10 }
-		}
-	}
-}
+#the_maritime_intelligencer_unit = {
+#	monarch_power = MIL
+#	
+#	potential = {
+#		has_idea_group = naval_ideas
+#		has_idea_group = spy_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = naval_ideas
+#		full_idea_group = spy_ideas
+#	}	
+#	
+#	siege_blockade_progress = 1
+#	global_naval_engagement_modifier = 0.1
+#	
+#	ai_will_do = {
+#		factor = 1
+#		modifier = {
+#			factor = 0
+#			NOT = { num_of_heavy_ship = 10 }
+#		}
+#	}
+#}
 
-the_nautic_education_act = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = naval_ideas
-		has_idea_group = innovativeness_ideas
-	}
-	
-	allow = {
-		full_idea_group = naval_ideas
-		full_idea_group = innovativeness_ideas
-	}	
-	
-	recover_navy_morale_speed = 0.05
-	leader_naval_fire = 1
-	
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 10 }
-		}
-		modifier = {
-			factor = 0.6
-			NOT = { navy_size = 20 }
-		}
-	}
-}
+#the_nautic_education_act = {
+#	monarch_power = MIL
+#	
+#	potential = {
+#		has_idea_group = naval_ideas
+#		has_idea_group = innovativeness_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = naval_ideas
+#		full_idea_group = innovativeness_ideas
+#	}	
+#	
+#	recover_navy_morale_speed = 0.05
+#	leader_naval_fire = 1
+#	
+#	ai_will_do = {
+#		factor = 1
+#		modifier = {
+#			factor = 0
+#			NOT = { navy_size = 10 }
+#		}
+#		modifier = {
+#			factor = 0.6
+#			NOT = { navy_size = 20 }
+#		}
+#	}
+#}
 
-zealous_captains = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = naval_ideas
-		has_idea_group = religious_ideas
-	}
-	
-	allow = {
-		full_idea_group = naval_ideas
-		full_idea_group = religious_ideas
-	}	
-	
-	sunk_ship_morale_hit_recieved = -0.10
-	leader_naval_shock = 1
-	
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 10 }
-		}
-		modifier = {
-			factor = 0.6
-			NOT = { navy_size = 20 }
-		}
-	}
-}
+#zealous_captains = {
+#	monarch_power = MIL
+#	
+#	potential = {
+#		has_idea_group = naval_ideas
+#		has_idea_group = religious_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = naval_ideas
+#		full_idea_group = religious_ideas
+#	}	
+#	
+#	sunk_ship_morale_hit_recieved = -0.10
+#	leader_naval_shock = 1
+#	
+#	ai_will_do = {
+#		factor = 1
+#		modifier = {
+#			factor = 0
+#			NOT = { navy_size = 10 }
+#		}
+#		modifier = {
+#			factor = 0.6
+#			NOT = { navy_size = 20 }
+#		}
+#	}
+#}
 
 autonomous_estates = {
 	monarch_power = MIL
@@ -678,30 +678,30 @@ inspirational_leaders = {
 	}
 }
 
-the_naval_inspection_act = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = humanist_ideas
-		has_idea_group = naval_ideas
-	}
-	
-	allow = {
-		full_idea_group = humanist_ideas
-		full_idea_group = naval_ideas
-	}	
-	
-	ship_durability = 0.05
-	recover_navy_morale_speed = 0.05
-	
-	ai_will_do = {
-		factor = 0.8
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 20 }
-		}
-	}
-}
+#the_naval_inspection_act = {
+#	monarch_power = MIL
+#	
+#	potential = {
+#		has_idea_group = humanist_ideas
+#		has_idea_group = naval_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = humanist_ideas
+#		full_idea_group = naval_ideas
+#	}	
+#	
+#	ship_durability = 0.05
+#	recover_navy_morale_speed = 0.05
+#	
+#	ai_will_do = {
+#		factor = 0.8
+#		modifier = {
+#			factor = 0
+#			NOT = { navy_size = 20 }
+#		}
+#	}
+#}
 
 the_preparation_act = {
 	monarch_power = MIL
@@ -890,28 +890,28 @@ the_colonial_nobility_act = {
 	}
 }
 
-nobles_in_navy_act = {
-	monarch_power = MIL
-	potential = {
-		has_idea_group = aristocracy_ideas
-		has_idea_group = maritime_ideas
-	}
-	
-	allow = {
-		full_idea_group = aristocracy_ideas
-		full_idea_group = maritime_ideas
-	}
-
-	navy_tradition_decay = -0.01
-
-	ai_will_do = {
-		factor = 0.6
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 20 }
-		}		
-	}
-}
+#nobles_in_navy_act = {
+#	monarch_power = MIL
+#	potential = {
+#		has_idea_group = aristocracy_ideas
+#		has_idea_group = maritime_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = aristocracy_ideas
+#		full_idea_group = maritime_ideas
+#	}
+#
+#	navy_tradition_decay = -0.01
+#
+#	ai_will_do = {
+#		factor = 0.6
+#		modifier = {
+#			factor = 0
+#			NOT = { navy_size = 20 }
+#		}		
+#	}
+#}
 
 military_allotment_act = {
 	monarch_power = MIL

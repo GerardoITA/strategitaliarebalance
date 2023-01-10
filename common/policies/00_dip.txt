@@ -1,89 +1,89 @@
-the_recruiting_act = {
-	monarch_power = DIP
+#the_recruiting_act = {
+#	monarch_power = DIP
+#
+#	potential = {
+#		has_idea_group = maritime_ideas
+#		has_idea_group = economic_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = maritime_ideas
+#		full_idea_group = economic_ideas
+#	}
+#	
+#	global_sailors_modifier = 0.25
+#	allowed_marine_fraction = 0.25
+#	
+#	ai_will_do = {
+#		factor = 0.6
+#		modifier = {
+#			factor = 0
+#			NOT = { navy_size = 20 }
+#		}
+#		modifier = {
+#			factor = 1.5
+#			navy_size = 50
+#		}
+#		modifier = {
+#			factor = 1.5
+#			navy_size = 100
+#		}			
+#		modifier = {
+#			factor = 1.5
+#			navy_size = 150
+#		}
+#		modifier = {
+#			factor = 1.5
+#			navy_size = 200
+#		}		
+#	}	
+#}
 
-	potential = {
-		has_idea_group = maritime_ideas
-		has_idea_group = economic_ideas
-	}
-	
-	allow = {
-		full_idea_group = maritime_ideas
-		full_idea_group = economic_ideas
-	}
-	
-	global_sailors_modifier = 0.25
-	allowed_marine_fraction = 0.25
-	
-	ai_will_do = {
-		factor = 0.6
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 20 }
-		}
-		modifier = {
-			factor = 1.5
-			navy_size = 50
-		}
-		modifier = {
-			factor = 1.5
-			navy_size = 100
-		}			
-		modifier = {
-			factor = 1.5
-			navy_size = 150
-		}
-		modifier = {
-			factor = 1.5
-			navy_size = 200
-		}		
-	}	
-}
+#hold_the_weather_gauge = {
+#	monarch_power = DIP
+#
+#	potential = {
+#		has_idea_group = maritime_ideas
+#		has_idea_group = offensive_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = maritime_ideas
+#		full_idea_group = offensive_ideas
+#	}
+#	
+#	leader_naval_manuever = 1
+#	ship_durability = 0.05
+#	
+#	ai_will_do = {
+#		factor = 1
+#	}
+#}
 
-hold_the_weather_gauge = {
-	monarch_power = DIP
-
-	potential = {
-		has_idea_group = maritime_ideas
-		has_idea_group = offensive_ideas
-	}
-	
-	allow = {
-		full_idea_group = maritime_ideas
-		full_idea_group = offensive_ideas
-	}
-	
-	leader_naval_manuever = 1
-	ship_durability = 0.05
-	
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-the_wooden_wall = {
-	monarch_power = DIP
-
-	potential = {
-		has_idea_group = maritime_ideas
-		has_idea_group = defensive_ideas
-	}
-	
-	allow = {
-		full_idea_group = maritime_ideas
-		full_idea_group = defensive_ideas
-	}
-
-	global_ship_cost = -0.10
-	naval_forcelimit_modifier = 0.15
-	
-	ai_will_do = {
-		factor = 0.6
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 20 }
-		}				
-	}
-}
+#the_wooden_wall = {
+#	monarch_power = DIP
+#
+#	potential = {
+#		has_idea_group = maritime_ideas
+#		has_idea_group = defensive_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = maritime_ideas
+#		full_idea_group = defensive_ideas
+#	}
+#
+#	global_ship_cost = -0.10
+#	naval_forcelimit_modifier = 0.15
+#	
+#	ai_will_do = {
+#		factor = 0.6
+#		modifier = {
+#			factor = 0
+#			NOT = { navy_size = 20 }
+#		}				
+#	}
+#}
 
 the_importation_act = {
 	monarch_power = DIP
@@ -272,73 +272,73 @@ restrictions_for_colonies = {
 
 
 
-naval_infrastructure_act = {
-	monarch_power = DIP
+#naval_infrastructure_act = {
+#	monarch_power = DIP
+#
+#
+#	potential = {
+#		has_idea_group = maritime_ideas
+#		has_idea_group = expansion_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = maritime_ideas
+#		full_idea_group = expansion_ideas
+#	}
+#
+#
+#	naval_forcelimit_modifier = 0.33
+#
+#
+#	ai_will_do = {
+#		factor = 1
+#		modifier = {
+#			factor = 0
+#			NOT = { navy_size_percentage = 0.9 }
+#		}			
+#		modifier = {
+#			factor = 1.5
+#			navy_size_percentage = 1.1
+#		}
+#		modifier = {
+#			factor = 1.5
+#			navy_size_percentage = 1.5
+#		}
+#		modifier = {
+#			factor = 1.5
+#			navy_size_percentage = 2
+#		}
+#		modifier = {
+#			factor = 1.5
+#			navy_size_percentage = 2.5
+#		}				
+#	}
+#}
 
-
-	potential = {
-		has_idea_group = maritime_ideas
-		has_idea_group = expansion_ideas
-	}
-	
-	allow = {
-		full_idea_group = maritime_ideas
-		full_idea_group = expansion_ideas
-	}
-
-
-	naval_forcelimit_modifier = 0.33
-
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { navy_size_percentage = 0.9 }
-		}			
-		modifier = {
-			factor = 1.5
-			navy_size_percentage = 1.1
-		}
-		modifier = {
-			factor = 1.5
-			navy_size_percentage = 1.5
-		}
-		modifier = {
-			factor = 1.5
-			navy_size_percentage = 2
-		}
-		modifier = {
-			factor = 1.5
-			navy_size_percentage = 2.5
-		}				
-	}
-}
-
-new_naval_tactis = {
-	monarch_power = DIP
-	potential = {
-		has_idea_group = innovativeness_ideas
-		has_idea_group = maritime_ideas
-	}
-	
-	allow = {
-		full_idea_group = innovativeness_ideas
-		full_idea_group = maritime_ideas
-	}
-
-	leader_naval_manuever = 1
-	heavy_ship_power = 0.1
-
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 20 }
-		}
-	}
-}
+#new_naval_tactis = {
+#	monarch_power = DIP
+#	potential = {
+#		has_idea_group = innovativeness_ideas
+#		has_idea_group = maritime_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = innovativeness_ideas
+#		full_idea_group = maritime_ideas
+#	}
+#
+#	leader_naval_manuever = 1
+#	heavy_ship_power = 0.1
+#
+#
+#	ai_will_do = {
+#		factor = 1
+#		modifier = {
+#			factor = 0
+#			NOT = { navy_size = 20 }
+#		}
+#	}
+#}
 
 trade_connection_policy = {
 	monarch_power = DIP
@@ -400,30 +400,30 @@ naval_secrecy_act = {
 	}
 }
 
-streamlined_galley_production = {
-	monarch_power = DIP
-	potential = {
-		has_idea_group = maritime_ideas
-		has_idea_group = quantity_ideas
-	}
-	
-	allow = {
-		full_idea_group = maritime_ideas
-		full_idea_group = quantity_ideas
-	}
-	
-	galley_cost = -0.15
-	galley_power = 0.15
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { num_of_galley = 10 }
-		}		
-	}	
-
-}
+#streamlined_galley_production = {
+#	monarch_power = DIP
+#	potential = {
+#		has_idea_group = maritime_ideas
+#		has_idea_group = quantity_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = maritime_ideas
+#		full_idea_group = quantity_ideas
+#	}
+#	
+#	galley_cost = -0.15
+#	galley_power = 0.15
+#
+#	ai_will_do = {
+#		factor = 1
+#		modifier = {
+#			factor = 0
+#			NOT = { num_of_galley = 10 }
+#		}		
+#	}	
+#
+#}
 
 cloth_quality_edict = {
 	monarch_power = DIP
@@ -640,54 +640,54 @@ colonial_companies_act = {
 	}
 }
 
-protected_shipping_lanes = {
-	monarch_power = DIP
-	potential = {
-		has_idea_group = maritime_ideas
-		has_idea_group = plutocracy_ideas
-	}
-	
-	allow = {
-		full_idea_group = maritime_ideas
-		full_idea_group = plutocracy_ideas
-	}
-	
-	light_ship_cost = -0.15
-	light_ship_power = 0.15
+#protected_shipping_lanes = {
+#	monarch_power = DIP
+#	potential = {
+#		has_idea_group = maritime_ideas
+#		has_idea_group = plutocracy_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = maritime_ideas
+#		full_idea_group = plutocracy_ideas
+#	}
+#	
+#	light_ship_cost = -0.15
+#	light_ship_power = 0.15
+#
+#	ai_will_do = {
+#		factor = 1
+#		modifier = {
+#			factor = 0
+#			NOT = { num_of_light_ship = 10 }
+#		}
+#	}
+#}
 
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { num_of_light_ship = 10 }
-		}
-	}
-}
-
-chaplains_of_the_fleet = {
-	monarch_power = DIP
-
-	potential = {
-		has_idea_group = religious_ideas
-		has_idea_group = maritime_ideas
-	}
-	
-	allow = {
-		full_idea_group = religious_ideas
-		full_idea_group = maritime_ideas
-	}
-	
-	naval_morale = 0.1
-	recover_navy_morale_speed = 0.05
-	
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 20 }
-		}
-	}
-}
+#chaplains_of_the_fleet = {
+#	monarch_power = DIP
+#
+#	potential = {
+#		has_idea_group = religious_ideas
+#		has_idea_group = maritime_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = religious_ideas
+#		full_idea_group = maritime_ideas
+#	}
+#	
+#	naval_morale = 0.1
+#	recover_navy_morale_speed = 0.05
+#	
+#	ai_will_do = {
+#		factor = 1
+#		modifier = {
+#			factor = 0
+#			NOT = { navy_size = 20 }
+#		}
+#	}
+#}
 
 multilingual_diplomats = {
 	monarch_power = DIP
@@ -989,30 +989,30 @@ colonial_administration_act = {
 	}
 }
 
-naval_school_act = {
-	monarch_power = DIP
-
-	potential = {
-		has_idea_group = administrative_ideas
-		has_idea_group = maritime_ideas
-	}
-	
-	allow = {
-		full_idea_group = administrative_ideas
-		full_idea_group = maritime_ideas
-	}
-
-	navy_tradition = 1
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0.6
-			NOT = { navy_size = 20 }
-		}		
-	}
-
-}
+#naval_school_act = {
+#	monarch_power = DIP
+#
+#	potential = {
+#		has_idea_group = administrative_ideas
+#		has_idea_group = maritime_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = administrative_ideas
+#		full_idea_group = maritime_ideas
+#	}
+#
+#	navy_tradition = 1
+#
+#	ai_will_do = {
+#		factor = 1
+#		modifier = {
+#			factor = 0.6
+#			NOT = { navy_size = 20 }
+#		}		
+#	}
+#
+#}
 
 the_foreign_support_act = {
 	monarch_power = DIP
@@ -1162,30 +1162,30 @@ armed_neutrality_act = {
 	}
 }
 
-the_naval_supremacy_act = {
-	monarch_power = DIP
-	
-	potential = {
-		has_idea_group = naval_ideas
-		has_idea_group = maritime_ideas
-	}
-	
-	allow = {
-		full_idea_group = naval_ideas
-		full_idea_group = maritime_ideas
-	}	
-	
-	siege_blockade_progress = 1
-	blockade_efficiency = 0.5
-	
-	ai_will_do = {
-		factor = 0.8
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 20 }
-		}
-	}
-}
+#the_naval_supremacy_act = {
+#	monarch_power = DIP
+#	
+#	potential = {
+#		has_idea_group = naval_ideas
+#		has_idea_group = maritime_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = naval_ideas
+#		full_idea_group = maritime_ideas
+#	}	
+#	
+#	siege_blockade_progress = 1
+#	blockade_efficiency = 0.5
+#	
+#	ai_will_do = {
+#		factor = 0.8
+#		modifier = {
+#			factor = 0
+#			NOT = { navy_size = 20 }
+#		}
+#	}
+#}
 
 letters_of_marque = {
 	monarch_power = DIP
@@ -1258,30 +1258,30 @@ steppe_nomad_migrations_policy = {
 	}
 }
 
-riverine_navy_policy = { 
-	monarch_power = DIP
-	
-	potential = {
-		has_idea_group = horde_gov_ideas
-		has_idea_group = maritime_ideas
-	}
-	
-	allow = {
-		full_idea_group = horde_gov_ideas
-		full_idea_group = maritime_ideas
-	}
-	
-	naval_forcelimit_modifier = 0.1
-	navy_tradition = 1
-
-	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 20 }
-		}				
-	}
-}
+#riverine_navy_policy = { 
+#	monarch_power = DIP
+#	
+#	potential = {
+#		has_idea_group = horde_gov_ideas
+#		has_idea_group = maritime_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = horde_gov_ideas
+#		full_idea_group = maritime_ideas
+#	}
+#	
+#	naval_forcelimit_modifier = 0.1
+#	navy_tradition = 1
+#
+#	ai_will_do = {
+#		factor = 1.0
+#		modifier = {
+#			factor = 0
+#			NOT = { navy_size = 20 }
+#		}				
+#	}
+#}
 
 passport_to_merchants_policy = { 
 	monarch_power = DIP
@@ -1352,26 +1352,26 @@ one_and_true = {
 	}
 }
 
-maritime_scribes = { 
-	monarch_power = DIP
-	
-	potential = {
-		has_idea_group = theocracy_gov_ideas
-		has_idea_group = maritime_ideas
-	}
-	
-	allow = {
-		full_idea_group = theocracy_gov_ideas
-		full_idea_group = maritime_ideas
-	}
-	
-	naval_tradition_from_battle = 0.5
-	prestige_from_naval = 0.5
-
-	ai_will_do = {
-		factor = 0
-	}
-}
+ #maritime_scribes = { 
+ #	monarch_power = DIP
+ #	
+ #	potential = {
+ #		has_idea_group = theocracy_gov_ideas
+ #		has_idea_group = maritime_ideas
+ #	}
+ #	
+ #	allow = {
+ #		full_idea_group = theocracy_gov_ideas
+ #		full_idea_group = maritime_ideas
+ #	}
+ #	
+ #	naval_tradition_from_battle = 0.5
+ #	prestige_from_naval = 0.5
+ #
+ #	ai_will_do = {
+ #		factor = 0
+ #	}
+ #}
 
 
 solidarity_policy = { #change name
@@ -1503,22 +1503,22 @@ commercial_tribes_policy = {
 	}
 }
 
-canoe_expertise_policy = {
-	monarch_power = DIP
-	
-	potential = {
-		has_idea_group = indigenous_ideas
-		has_idea_group = maritime_ideas
-	}
-	
-	allow = {
-		full_idea_group = indigenous_ideas
-		full_idea_group = maritime_ideas
-	}
-	
-	disengagement_chance = 0.25
-
-	ai_will_do = {
-		factor = 1
-	}
-}
+#canoe_expertise_policy = {
+#	monarch_power = DIP
+#	
+#	potential = {
+#		has_idea_group = indigenous_ideas
+#		has_idea_group = maritime_ideas
+#	}
+#	
+#	allow = {
+#		full_idea_group = indigenous_ideas
+#		full_idea_group = maritime_ideas
+#	}
+#	
+#	disengagement_chance = 0.25
+#
+#	ai_will_do = {
+#		factor = 1
+#	}
+#}

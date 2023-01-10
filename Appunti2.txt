@@ -2,7 +2,7 @@
 - rifai zone coloniali 
 
 - rampart diventa 50% defensiveness, +2 max attrition e +2 attrition 
-- rampart double garrison size?
+#- rampart double garrison size?
 
 - fix stackwipes
 
@@ -31,8 +31,8 @@ STRETTI!!!
 #- nerf courthouses -12,5% e town hall -25%
 #- nerf statehouse 
 #- halve siam's +1cav
-- dare riforma di governo ottomana ultimo tier con 10% morale of armiese tier 7/8 riforma ottomana che da accesso al buff jannies
-- per formare Germania serve tutta germania 1870
+#- dare riforma di governo ottomana ultimo tier con 10% morale of armiese tier 7/8 riforma ottomana che da accesso al buff jannies
+#- per formare Germania serve tutta germania 1870
 #- togliere vassal force limit a influence e policy varie
 #- ogni colonia toglie 5% vassal force limit contribution
 #- crown colony da 10% manpower e 10% force limit 
@@ -43,12 +43,16 @@ STRETTI!!!
 
 - rework monumenti?
 #- IMPORTANTE fix culture delle minor cinesi
-- fix missioni qing ( troppo op )
+#- fix missioni qing ( troppo op )
 #- rendere LOCKED prussian government
 - fix mughal estates and buff mughal ideas
 - remove policieeeeees
-- nerf theocracy
+#- nerf theocracy
 
-- monarchia da 75 extra assolutismo, 2,5 admin efficiency in più o parlamento gratis
-- togliere assolutismo gratis per tutti
-- evento che da -0.15 autonomy e -10 years of separatism
+#- monarchia da 75 extra assolutismo, 2,5 admin efficiency in più o parlamento gratis#
+#- togliere assolutismo gratis per tutti
+#- evento che da -0.15 autonomy e -10 years of separatism
+- xian ha provincia con tanto trade power 
+
+#- colonie non possono usare diplomatici al di fuori del nuovo mondo
+#- rimuovere call for peace
