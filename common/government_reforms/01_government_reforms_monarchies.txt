@@ -991,28 +991,30 @@ mughal_government = {
 
 	assimilation_cultures = {
 		altaic = {
-			artillery_cost = -0.1
+			artillery_cost = -0.33
+			artillery_fire = 0.2
 		}
 		baltic = {
-			naval_forcelimit_modifier = 0.05
+			naval_forcelimit_modifier = 0.5
 		}
 		british = {
-			ship_durability = 0.05
+			naval_morale = 0.2
 		}
 		burman = {
-			free_leader_pool = 1
+			free_leader_pool = 5
 		}
 		byzantine = {
-			legitimacy = 0.25
+			legitimacy = 0.1
 		}
 		carpathian = {
-			mercenary_cost = -0.1
-		}
-		caucasian = {
+			mercenary_cost = -0.33
 			mercenary_discipline = 0.05
 		}
+		caucasian = {
+			mercenary_discipline = 0.1
+		}
 		gaelic = {
-			shock_damage = 0.05
+			shock_damage = 0.2
 		}
 		central_indic = {
 			land_attrition = -0.1
@@ -1027,16 +1029,16 @@ mughal_government = {
 			missionaries = 1
 		}
 		dravidian = {
-			global_trade_goods_size_modifier = 0.05
+			global_trade_goods_size_modifier = 0.15
 		}
 		african = {
-			global_tax_income = 10
+			global_tax_income = 120
 		}
 		east_slavic = {
-			land_forcelimit_modifier = 0.1
+			land_forcelimit_modifier = 0.25
 		}
 		eastern_aryan = {
-			production_efficiency = 0.05
+			production_efficiency = 0.2
 		}
 		evenks = {
 			cavalry_flanking = 0.2
@@ -1051,13 +1053,13 @@ mughal_government = {
 			loot_amount = 0.5
 		}
 		hindusthani = {
-			core_creation = -0.1
+			all_power_cost = -0.05
 		}
 		iberian = {
 			global_colonial_growth = 10
 		}
 		iranian = {
-			advisor_cost = -0.1
+			infantry_power = 0.15
 		}
 		japanese_g = {
 			land_morale = 0.1
@@ -1075,13 +1077,13 @@ mughal_government = {
 			discipline = 0.05
 		}
 		turko_semitic = {
-			cavalry_power = 0.1
+			cavalry_power = 0.25
 		}
 		maghrebi = {
 			privateer_efficiency = 0.25
 		}
 		malay = {
-			merchants = 1
+			merchants = 3
 		}
 		mande = {
 			tolerance_heretic = 1
@@ -1117,16 +1119,16 @@ mughal_government = {
 			prestige_per_development_from_conversion = 0.5
 		}
 		finno_ugric = {
-			prestige_decay = -0.01
+			prestige_decay = -0.1
 		}
 		west_african = {
-			global_autonomy = -0.01
+			global_autonomy = -0.1
 		}
 		west_slavic = {
 			leader_land_fire = 1
 		}
 		western_aryan = {
-			trade_efficiency = 0.05
+			trade_efficiency = 0.15
 		}
 	}
 }
