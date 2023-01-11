@@ -98,6 +98,7 @@ country_decisions = {
 		}
 		allow = {
 			NOT = { exists = PRU }
+			NOT = { exists = GER }
 			adm_tech = 10
 			OR = {
 				religion = protestant
