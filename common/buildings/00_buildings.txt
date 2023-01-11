@@ -1689,7 +1689,7 @@ ramparts = {
 	modifier = {
 		local_hostile_attrition = 2
 		local_defensiveness = 0.33
-		garrison_size = 1
+		local_garrison_size = 1
 	}
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
