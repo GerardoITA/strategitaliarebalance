@@ -54,6 +54,9 @@ mjl_english_cuck = {
 strategitalia_colonist = {
 	colonists = 1
 	global_colonial_growth = 60
+	may_explore = yes
+	range = 0.5
+	
 }
 p_janissary_decadence = {
 	is_janissary_modifier = yes

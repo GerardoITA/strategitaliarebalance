@@ -596,7 +596,6 @@ economic_ideas = {
 	}
 }
 
-
 exploration_ideas = {
 	category = DIP
 	important = yes
@@ -605,10 +604,10 @@ exploration_ideas = {
 		cb_on_primitives = yes
 	}
 
-	quest_for_the_new_world	= {
-		may_explore = yes
+	merchant_marine = {
+		global_sailors_modifier = 0.5
+		allowed_marine_fraction = 0.25
 	}
-
 	colonial_ventures = {
 		colonists = 1
 	}
@@ -623,11 +622,11 @@ exploration_ideas = {
 		global_tariffs = 0.10
  		envoy_travel_time = -0.20
  	}
-	free_colonies = {
-		colonist_placement_chance = 0.1
+	merchant_traditions = {
+		naval_tradition_from_trade = 1.0
 	}
 	global_empire = {
-		naval_forcelimit_modifier = 0.25
+		naval_forcelimit_modifier = 0.5
 		treasure_fleet_income = 0.25
 	}
 

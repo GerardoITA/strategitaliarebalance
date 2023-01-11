@@ -1227,3 +1227,17 @@ meme_defense = {
 	
 	
 }
+
+wuhan_food_market = {
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		always = yes
+	}
+
+	province_trade_power_modifier = 5
+	
+	
+}
