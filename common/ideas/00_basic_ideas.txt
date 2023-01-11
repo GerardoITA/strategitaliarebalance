@@ -603,15 +603,14 @@ exploration_ideas = {
 	bonus = {
 		cb_on_primitives = yes
 	}
-
+	colonial_ventures = {
+		colonists = 1
+		may_explore = yes
+	}
 	merchant_marine = {
 		global_sailors_modifier = 0.5
 		allowed_marine_fraction = 0.25
 	}
-	colonial_ventures = {
-		colonists = 1
-	}
-	
 	overseas_exploration = {
 		range = 0.5
 	}
