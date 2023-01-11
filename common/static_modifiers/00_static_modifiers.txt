@@ -1788,7 +1788,7 @@ hussars_regiment = {
 }
 
 marine_regiment = {
-    shock_damage_received = 0.25
+    shock_damage = 0.2
     regiment_disembark_speed = 2 
 }
 
