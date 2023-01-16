@@ -23,6 +23,7 @@ localizzazione, ideas, history
 
 STRETTI!!!
 
+!!!!!!!!!!!!!!!!!!!!!!!!!NERF TRADE SHIPS!!! FIX MERCANTILISMO EXPLOIT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 - formable per austria?
 - nerf cavalleria?
@@ -56,3 +57,18 @@ STRETTI!!!
 
 #- colonie non possono usare diplomatici al di fuori del nuovo mondo
 #- rimuovere call for peace
+
+
+
+idee per punti:
+
+missioni, power projection, province, formare paesi
+
+
+
+!!Rounding variabili nuove
+
+
+
+
+

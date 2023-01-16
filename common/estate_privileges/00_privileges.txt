@@ -8135,7 +8135,6 @@ estate_burghers_exclusive_trade_rights = {
 				}
 			}
 		}
-		add_mercantilism = 3
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_exclusive_trade_rights_revoke_tooltip
@@ -8210,7 +8209,6 @@ estate_vaisyas_exclusive_trade_rights = {
 				}
 			}
 		}
-		add_mercantilism = 3
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_exclusive_trade_rights_revoke_tooltip
@@ -8286,7 +8284,6 @@ estate_jains_exclusive_trade_rights = {
 				}
 			}
 		}
-		add_mercantilism = 3
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_exclusive_trade_rights_revoke_tooltip

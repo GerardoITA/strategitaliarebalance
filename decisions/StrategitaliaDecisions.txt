@@ -470,24 +470,24 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	p_combat_janissary_decadence = {
-		potential = {
-			tag = TUR
-			NOT = {
-				has_country_modifier = p_janissary_decadence
-			}
-		}
-		allow = {
-			tag = TUR
-			is_year = 1622
-		}
-		effect = {
-			add_country_modifier = {
-				name = "p_janissary_decadence"
-				duration = -1
-			}
-		}
-	}
+##	p_combat_janissary_decadence = {
+##		potential = {
+##			tag = TUR
+##			NOT = {
+##				has_country_modifier = p_janissary_decadence
+##			}
+##		}
+##		allow = {
+##			tag = TUR
+##			is_year = 1622
+##		}
+##		effect = {
+##			add_country_modifier = {
+##				name = "p_janissary_decadence"
+##				duration = -1
+##			}
+##		}
+##	}
 	mjl_change_muslim_school = {
 		major = no
 		potential = {
@@ -539,7 +539,6 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	
 	
 	
 	

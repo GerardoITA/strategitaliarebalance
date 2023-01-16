@@ -56,6 +56,7 @@ NDefines.NEconomy.DECREASE_AUTONOMY_MIN = 0
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 1
 NDefines.NEconomy.PIRATES_TRADE_POWER_FACTOR = 0.1
 NDefines.NEconomy.COT_DOWNGRADE_PRESTIGE_COST = 0
+NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER = 5 -- Non cambiato dal vanilla, potrei cambiarlo in futuro ( divisore del TP, più aumenta questo valore, meno trade power viene trasferito da downstream )
 
 --Military
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 40
@@ -72,3 +73,8 @@ NDefines.NReligion.HARMONY_LOSS_PER_DEV_CONVERTED = 0
 NDefines.NReligion.YEARLY_HARMONY_INCREASE_WHEN_HARMONIZING = -5.0
 NDefines.NReligion.YEARLY_HARMONIZATION_PROGRESS = 0.05
 NDefines.NReligion.CHANGE_SECONDARY_PRESTIGE_HIT = 0
+
+--AI
+NDefines.NAI.BUY_INDULGENCE_BASE_AI_DESIRE = -1
+NDefines.NAI.BUY_INDULGENCE_RIVAL_AI_DESIRE = -1					
+NDefines.NAI.BUY_INDULGENCE_EXCOM_AI_DESIRE = -1
