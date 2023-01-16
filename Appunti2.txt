@@ -23,7 +23,7 @@ localizzazione, ideas, history
 
 STRETTI!!!
 
-!!!!!!!!!!!!!!!!!!!!!!!!!NERF TRADE SHIPS!!! FIX MERCANTILISMO EXPLOIT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#!!!!!!!!!!!!!!!!!!!!!!!!!NERF TRADE SHIPS!!! FIX MERCANTILISMO EXPLOIT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 - formable per austria?
 - nerf cavalleria?
@@ -53,7 +53,7 @@ STRETTI!!!
 #- monarchia da 75 extra assolutismo, 2,5 admin efficiency in più o parlamento gratis#
 #- togliere assolutismo gratis per tutti
 #- evento che da -0.15 autonomy e -10 years of separatism
-- xian ha provincia con tanto trade power 
+#- xian ha provincia con tanto trade power 
 
 #- colonie non possono usare diplomatici al di fuori del nuovo mondo
 #- rimuovere call for peace
