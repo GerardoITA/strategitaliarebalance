@@ -3,7 +3,6 @@
 owner = HUA
 controller = HUA
 add_core = HUA
-add_core = CMI
 culture = xiang
 religion = animism
 capital = "Hengyang"
@@ -13,8 +12,6 @@ base_tax = 3
 base_production = 3
 base_manpower = 3
 is_city = yes
-add_core = 
-
 
 
 discovered_by = chinese

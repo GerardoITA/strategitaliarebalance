@@ -3,7 +3,6 @@
 owner = HUA
 controller = HUA
 add_core = HUA
-add_core = CMI
 culture = miao
 religion = animism
 capital = "Zhenyuan"
