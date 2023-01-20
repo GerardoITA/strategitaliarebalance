@@ -1,4 +1,13 @@
 ﻿l_english:
+ player_culture:0 "Culture Conversion Bonus"
+ player_culture_desc:0 "Makes it easier for players to consolidate cultures and shift culture lategame."
+ strategitalia_forts_0:0 "Level 1 Lategame Forts"
+ strategitalia_forts_0_desc:0 "Buff to fort garrison avoid free assaults."
+ strategitalia_forts_1:0 "Level 2 Lategame Forts"
+ strategitalia_forts_2_desc:0 ""Buff to fort garrison avoid free assaults."
+ strategitalia_forts_2:0 "Level 3 Lategame Forts"
+ strategitalia_forts_2_desc:0 "Buff to fort garrison avoid free assaults."
+
  jannissary_reform_desc:0 "By empowering our janissary, they will form a formidable combat force."
  jannissary_reform:0 "Empower the Janissary"
  mechanic_jannissary_reform_privilege_interaction_yes: "Enables the Dhimmi Estate Privilege §YReform the Janissary§!, which grants §G10% Discipline§! to §YJanissary Regiments§!"

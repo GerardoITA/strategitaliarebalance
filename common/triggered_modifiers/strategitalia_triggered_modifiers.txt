@@ -67,3 +67,34 @@ player_culture = {
 	culture_conversion_cost = -0.33
 }
 
+strategitalia_forts_0 = {
+	potential = {
+		was_player = yes 
+	}
+	trigger = {
+		is_year = 1600
+		
+	}
+	garrison_size = 0.5
+}
+strategitalia_forts_1 = {
+	potential = {
+		was_player = yes 
+	}
+	trigger = {
+		is_year = 1650
+		
+	}
+	garrison_size = 1
+}
+strategitalia_forts_2 = {
+	potential = {
+		was_player = yes 
+	}
+	trigger = {
+		is_year = 1700
+		
+	}
+	garrison_size = 1
+}
+
