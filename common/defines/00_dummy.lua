@@ -63,7 +63,8 @@ NDefines.NMilitary.WARGOAL_MAX_BONUS = 40
 NDefines.NMilitary.DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 0.7
 NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.0	-- Daje i cannoni sono di nuovo come nelle patch precedenti
 NDefines.NMilitary.BACK_LINE_STRENGTH_DAMAGE_TAKEN_MODIFIER = 0.0
-NDefines.NMilitary.CANNOT_RETREAT_DAYS = 1
+NDefines.NMilitary.CANNOT_RETREAT_DAYS = 4
+NDefines.NMilitary.DAYS_PER_PHASE = 2
 
 --Religion 
 NDefines.NReligion.MAX_CHURCH_POWER = 300
