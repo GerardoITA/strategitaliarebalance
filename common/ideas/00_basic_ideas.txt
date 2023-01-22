@@ -611,7 +611,7 @@ exploration_ideas = {
 		global_sailors_modifier = 0.5
 		allowed_marine_fraction = 0.1
 	}
-	overseas_exploration = {
+	quest_for_the_new_world  = {
 		range = 0.5
 	}
 	land_of_opportunity = {
