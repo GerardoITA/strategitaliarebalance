@@ -94,6 +94,27 @@ on_startup = {
 			set_country_flag = ayu_monarch_flag
 		}
 	}
+	if = {
+		limit = {
+			NOT =  {has_country_flag = discoverchina.0 }
+			ROOT = {
+				ai = no
+			}	
+			OR {
+				tag = WUU
+				tag = CSH
+				tag = YAN
+				tag = YUE
+				tag = UES
+				tag = AYU
+			}
+		}
+		set_country_flag = discoverchina.0
+		country_event = { 
+			id = discoverchina.0
+			days = 1
+		}
+	}
 	#if = {
 	#	limit = {
 	#		OR = {
